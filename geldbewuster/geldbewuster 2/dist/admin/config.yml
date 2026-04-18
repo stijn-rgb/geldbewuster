@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: "artikelen"
+    label: "Artikelen"
+    folder: "src/content/artikelen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Categorie", name: "category", widget: "select", options: ["opbouwen", "beschermen", "oplossen", "slim-leven", "vergelijker", "persoonlijk"] }
+      - { label: "Leestijd (min)", name: "readTime", widget: "number" }
+      - { label: "Samenvatting", name: "summary", widget: "text" }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+      - { label: "Affiliate link", name: "affiliateLink", widget: "string", required: false }
+      - { label: "Gepubliceerd", name: "published", widget: "boolean", default: true }
+
+  - name: "paginas"
+    label: "Pagina's"
+    folder: "src/content/paginas"
+    create: false
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Intro tekst", name: "intro", widget: "text" }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
