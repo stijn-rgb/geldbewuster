@@ -6,7 +6,7 @@ const navItems = [
   { label: 'Beleggen', path: '/beleggen' },
   { label: 'Sparen', path: '/sparen' },
   { label: 'Extra inkomen', path: '/extra-inkomen' },
-  { label: 'Schulden & hulp', path: '/schulden' },
+  { label: 'Schulden', path: '/schulden' },
   { label: 'Verzekeringen', path: '/verzekeringen' },
   { label: 'Tools', path: '/tools' },
   { label: 'Blog', path: '/blog' },
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-xs px-2.5 py-1.5 rounded-full transition-colors whitespace-nowrap ${
+                className={`text-xs px-2 py-1.5 rounded-full transition-colors whitespace-nowrap ${
                   location.pathname === item.path
                     ? 'bg-gray-100 text-gray-900 font-medium'
                     : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
