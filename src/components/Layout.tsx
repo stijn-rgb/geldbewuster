@@ -20,28 +20,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
       {/* FLOATING PILL NAV */}
       <div className="sticky top-0 z-20 flex justify-center px-4 pt-4 pb-2">
-        <nav className="w-full max-w-4xl bg-white/90 backdrop-blur border border-black/10 rounded-full px-2 py-2 flex items-center gap-1 shadow-sm">
-          <Link to="/" className="flex items-center gap-2 pl-1 pr-4 mr-auto">
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{background: '#1A1A18'}}>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <nav className="w-full max-w-4xl bg-white/90 backdrop-blur border border-black/10 rounded-full px-2 py-1.5 flex items-center gap-1 shadow-sm">
+          <Link to="/" className="font-serif text-sm text-gray-900 pl-2 pr-3 mr-auto whitespace-nowrap flex items-center gap-1.5">
+            <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0" style={{background: '#1A1A18'}}>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1" y="9" width="3" height="5" rx="1" fill="#1D9E75" fillOpacity="0.45"/>
                 <rect x="6" y="5" width="3" height="9" rx="1" fill="#1D9E75" fillOpacity="0.72"/>
                 <rect x="11" y="1" width="3" height="13" rx="1" fill="#1D9E75"/>
                 <line x1="0.5" y1="14.5" x2="15.5" y2="14.5" stroke="#1D9E75" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.4"/>
               </svg>
             </div>
-            <span className="font-serif text-base text-gray-900 whitespace-nowrap">
-              geld<span className="text-brand-500">bewuster</span>.nl
-            </span>
+            <span>geld<span className="text-brand-500">bewuster</span>.nl</span>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-0.5">
             {navItems.map(item => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm px-3 py-1.5 rounded-full transition-colors whitespace-nowrap ${
+                className={`text-xs px-2.5 py-1.5 rounded-full transition-colors whitespace-nowrap ${
                   location.pathname === item.path
                     ? 'bg-gray-100 text-gray-900 font-medium'
                     : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
@@ -56,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             href={affiliateUrl('degiro', 'navbar')}
             target="_blank"
             rel="noopener sponsored"
-            className="hidden md:inline-block bg-brand-500 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors ml-1 whitespace-nowrap"
+            className="hidden md:inline-block bg-brand-500 hover:bg-brand-700 text-white text-xs font-medium px-3.5 py-2 rounded-full transition-colors ml-1 whitespace-nowrap"
           >
             Start gratis →
           </a>
