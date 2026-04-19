@@ -2,20 +2,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const allArticles = [
-  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2025 — de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen', affiliate: false },
-  { tag: 'Broker', title: 'DEGIRO review 2025 — eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen', affiliate: true },
-  { tag: "ETF's", title: "Beste ETF's voor Nederlandse beleggers 2025", summary: "IWDA, VWRL, VUSA — welke indexfondsen zijn het meest geschikt voor een Nederlandse belegger?", readTime: 9, path: '/beleggen', affiliate: true },
-  { tag: 'Crypto', title: 'Bitcoin kopen in Nederland — veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2025, zonder gedoe.', readTime: 5, path: '/beleggen', affiliate: true },
-  { tag: 'Schulden', title: 'Uit de schulden — het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/schulden', affiliate: false },
-  { tag: 'Schulden', title: 'Schuldhulpverlening — wie helpt jou gratis?', summary: 'Een overzicht van alle instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/schulden', affiliate: false },
+  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2025: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen', affiliate: false },
+  { tag: 'Broker', title: 'DEGIRO review 2025: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen', affiliate: true },
+  { tag: "ETF's", title: "Beste ETF's voor Nederlandse beleggers 2025", summary: "IWDA, VWRL, VUSA, welke indexfondsen zijn het meest geschikt voor een Nederlandse belegger?", readTime: 9, path: '/beleggen', affiliate: true },
+  { tag: 'Crypto', title: 'Bitcoin kopen in Nederland. Veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2025, zonder gedoe.', readTime: 5, path: '/beleggen', affiliate: true },
+  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/schulden', affiliate: false },
+  { tag: 'Schulden', title: 'Schuldhulpverlening, wie helpt jou gratis?', summary: 'Een overzicht van alle instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/schulden', affiliate: false },
   { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2025', summary: 'Welke bank biedt de hoogste spaarrente? Ons actuele overzicht van alle grote aanbieders.', readTime: 5, path: '/sparen', affiliate: true },
-  { tag: 'Sparen', title: 'Noodfonds opbouwen — hoeveel heb je nodig?', summary: 'Een noodfonds is de basis van financiële gezondheid. Zo bouw je er één op.', readTime: 5, path: '/sparen', affiliate: false },
+  { tag: 'Sparen', title: 'Noodfonds opbouwen. Hoeveel heb je nodig?', summary: 'Een noodfonds is de basis van financiële gezondheid. Zo bouw je er één op.', readTime: 5, path: '/sparen', affiliate: false },
   { tag: 'Budget', title: 'Budget maken in 5 stappen', summary: 'Een budget hoeft niet ingewikkeld te zijn. Met dit stappenplan ben je in een uur klaar.', readTime: 5, path: '/sparen', affiliate: false },
-  { tag: 'Verzekeringen', title: 'Zorgverzekering vergelijken — bespaar honderden euros', summary: 'Zo vind je de goedkoopste zorgverzekering die bij jou past.', readTime: 6, path: '/verzekeringen', affiliate: true },
-  { tag: 'Verzekeringen', title: 'Autoverzekering vergelijken — de complete gids', summary: 'WA, beperkt of volledig casco? En welke verzekeraar is het goedkoopst?', readTime: 7, path: '/verzekeringen', affiliate: true },
-  { tag: 'Vermogen', title: 'Passief inkomen genereren — 10 manieren in 2025', summary: 'Van dividend tot verhuur — een eerlijk overzicht van alle manieren om passief inkomen te verdienen.', readTime: 9, path: '/extra-inkomen', affiliate: false },
+  { tag: 'Verzekeringen', title: 'Zorgverzekering vergelijken. Bespaar honderden euros', summary: 'Zo vind je de goedkoopste zorgverzekering die bij jou past.', readTime: 6, path: '/verzekeringen', affiliate: true },
+  { tag: 'Verzekeringen', title: 'Autoverzekering vergelijken: de complete gids', summary: 'WA, beperkt of volledig casco? En welke verzekeraar is het goedkoopst?', readTime: 7, path: '/verzekeringen', affiliate: true },
+  { tag: 'Vermogen', title: 'Passief inkomen genereren. 10 manieren in 2025', summary: 'Van dividend tot verhuur, een eerlijk overzicht van alle manieren om passief inkomen te verdienen.', readTime: 9, path: '/extra-inkomen', affiliate: false },
   { tag: 'Vermogen', title: 'Wanneer ben je rijk in Nederland?', summary: 'Wat betekent rijk zijn eigenlijk? We kijken naar vermogen, inkomen en gevoel.', readTime: 5, path: '/extra-inkomen', affiliate: false },
-  { tag: 'Beleggen', title: 'Sparen vs beleggen — wat is slimmer in 2025?', summary: 'Wanneer spaar je en wanneer beleg je? Het antwoord hangt af van jouw situatie.', readTime: 6, path: '/sparen', affiliate: false },
+  { tag: 'Beleggen', title: 'Sparen vs beleggen. Wat is slimmer in 2025?', summary: 'Wanneer spaar je en wanneer beleg je? Het antwoord hangt af van jouw situatie.', readTime: 6, path: '/sparen', affiliate: false },
 ]
 
 const categories = ['Alle', 'Beleggen', "ETF's", 'Broker', 'Crypto', 'Sparen', 'Budget', 'Schulden', 'Verzekeringen', 'Vermogen']

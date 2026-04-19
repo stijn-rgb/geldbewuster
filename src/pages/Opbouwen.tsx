@@ -2,15 +2,15 @@ import { PageHero, ArticleCard, AffiliateCTA, SectionHeader, InfoCard } from '..
 import { affiliateUrl } from '../config/affiliate'
 
 const articles = [
-  { tag: 'Beleggen', title: 'Beginnen met beleggen — de complete gids voor 2025', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/opbouwen', affiliate: false },
-  { tag: 'Beleggen', title: 'DEGIRO review 2025 — eerlijk en volledig', summary: "Is DEGIRO de beste broker voor jou? Wij zetten de voor- en nadelen op een rij.", readTime: 6, path: '/opbouwen', affiliate: true },
-  { tag: 'Beleggen', title: 'Trading 212 review — gratis beleggen maar wat zijn de haken?', summary: 'Trading 212 biedt gratis beleggen. Maar hoe verdienen ze dan geld? En is het veilig?', readTime: 5, path: '/opbouwen', affiliate: true },
+  { tag: 'Beleggen', title: 'Beginnen met beleggen: de complete gids voor 2025', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/opbouwen', affiliate: false },
+  { tag: 'Beleggen', title: 'DEGIRO review 2025: eerlijk en volledig', summary: "Is DEGIRO de beste broker voor jou? Wij zetten de voor- en nadelen op een rij.", readTime: 6, path: '/opbouwen', affiliate: true },
+  { tag: 'Beleggen', title: 'Trading 212 review. Gratis beleggen, maar wat zijn de haken?', summary: 'Trading 212 biedt gratis beleggen. Maar hoe verdienen ze dan geld? En is het veilig?', readTime: 5, path: '/opbouwen', affiliate: true },
   { tag: "ETF's", title: "Wat is een ETF? Uitgelegd in gewone taal", summary: "Indexfondsen zijn de slimste manier om te beleggen voor de meeste mensen. Dit is waarom.", readTime: 7, path: '/opbouwen', affiliate: false },
   { tag: "ETF's", title: "De beste ETF's voor Nederlandse beleggers in 2025", summary: "Welke indexfondsen zijn het meest geschikt voor een Nederlandse belegger? Ons overzicht.", readTime: 9, path: '/opbouwen', affiliate: true },
-  { tag: 'Aandelen', title: 'Aandelen kopen als beginner — zo doe je het veilig', summary: 'Stappenplan om je eerste aandelen te kopen zonder dure fouten te maken.', readTime: 6, path: '/opbouwen', affiliate: false },
-  { tag: 'Crypto', title: 'Bitcoin kopen in Nederland — veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2025, zonder gedoe.', readTime: 5, path: '/opbouwen', affiliate: true },
-  { tag: 'Crypto', title: 'Wat is crypto? Alles uitgelegd voor beginners', summary: 'Blockchain, Bitcoin, altcoins — we leggen het allemaal uit in begrijpelijke taal.', readTime: 8, path: '/opbouwen', affiliate: false },
-  { tag: 'Pensioen', title: 'Pensioen opbouwen als ZZP\'er — wat zijn je opties?', summary: 'Als zzp\'er bouw je geen pensioen op via een werkgever. Dit zijn je alternatieven.', readTime: 7, path: '/opbouwen', affiliate: false },
+  { tag: 'Aandelen', title: 'Aandelen kopen als beginner. Zo doe je het veilig', summary: 'Stappenplan om je eerste aandelen te kopen zonder dure fouten te maken.', readTime: 6, path: '/opbouwen', affiliate: false },
+  { tag: 'Crypto', title: 'Bitcoin kopen in Nederland. Veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2025, zonder gedoe.', readTime: 5, path: '/opbouwen', affiliate: true },
+  { tag: 'Crypto', title: 'Wat is crypto? Alles uitgelegd voor beginners', summary: 'Blockchain, Bitcoin, altcoins, we leggen het allemaal uit in begrijpelijke taal.', readTime: 8, path: '/opbouwen', affiliate: false },
+  { tag: 'Pensioen', title: 'Pensioen opbouwen als ZZP\'er. Wat zijn je opties?', summary: 'Als zzp\'er bouw je geen pensioen op via een werkgever. Dit zijn je alternatieven.', readTime: 7, path: '/opbouwen', affiliate: false },
 ]
 
 export default function Opbouwen() {
@@ -18,7 +18,7 @@ export default function Opbouwen() {
     <>
       <PageHero
         badge="Opbouwen"
-        title={<>Vermogen opbouwen — <em className="text-brand-500 not-italic">stap voor stap</em></>}
+        title={<>Vermogen opbouwen, <em className="text-brand-500 not-italic">stap voor stap</em></>}
         subtitle="Van je eerste aandeel tot een gespreide beleggingsportefeuille. Wij leggen alles uit in gewone taal."
       />
 
@@ -32,7 +32,7 @@ export default function Opbouwen() {
 
         <AffiliateCTA
           title="Begin vandaag met beleggen"
-          subtitle="Open gratis een account bij DEGIRO — geen maandelijkse kosten, al vanaf €1."
+          subtitle="Open gratis een account bij DEGIRO, geen maandelijkse kosten, al vanaf €1."
           cta="Account openen bij DEGIRO →"
           href={affiliateUrl('degiro', 'opbouwen-cta')}
         />

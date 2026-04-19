@@ -37,7 +37,7 @@ export function AffiliateCTA({ title, subtitle, cta, href }: { title: string; su
       <a href={href} target="_blank" rel="noopener sponsored" className="inline-block bg-white text-brand-500 hover:opacity-90 font-medium px-8 py-3 rounded-lg transition-opacity text-sm">
         {cta}
       </a>
-      <p className="text-xs opacity-50 mt-3">Affiliate link — geen extra kosten voor jou</p>
+      <p className="text-xs opacity-50 mt-3">Affiliate link</p>
     </div>
   )
 }
