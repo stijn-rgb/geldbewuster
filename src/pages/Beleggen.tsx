@@ -1,4 +1,5 @@
 import { PageHero, ArticleCard, AffiliateCTA, SectionHeader, InfoCard } from '../components/UI'
+import SEO from '../components/SEO'
 import { affiliateUrl } from '../config/affiliate'
 
 const articles = [
@@ -17,6 +18,7 @@ const articles = [
 export default function Beleggen() {
   return (
     <>
+      <SEO title="Beginnen met beleggen: alles wat je moet weten" description="Leer beleggen in ETFs, aandelen en crypto. Van je eerste belegging tot een gespreide portefeuille. Begrijpelijk uitgelegd voor beginners." canonical="/beleggen" />
       <PageHero
         badge="Beleggen"
         title={<>Laat je geld <em className="text-brand-500 not-italic">voor je werken</em></>}

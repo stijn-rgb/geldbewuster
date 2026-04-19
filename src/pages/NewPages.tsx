@@ -1,4 +1,5 @@
 import { PageHero, ArticleCard, AffiliateCTA, SectionHeader, InfoCard } from '../components/UI'
+import SEO from '../components/SEO'
 import { affiliateUrl } from '../config/affiliate'
 
 // ── SPAREN ──
@@ -16,6 +17,7 @@ const sparenArticles = [
 export function Sparen() {
   return (
     <>
+      <SEO title="Sparen in Nederland: alles wat je moet weten" description="Vergelijk spaarrekeningen, bouw een noodfonds op en leer slimmer omgaan met je geld. Actuele tips en eerlijke vergelijkingen." canonical="/sparen" />
       <PageHero
         badge="Sparen"
         title={<>Meer overhouden <em className="text-brand-500 not-italic">zonder in te leveren</em></>}
@@ -53,6 +55,7 @@ const inkomenArticles = [
 export function ExtraInkomen() {
   return (
     <>
+      <SEO title="Extra inkomen: passief inkomen en vermogensgroei" description="Ontdek hoe je passief inkomen genereert via dividend, ETFs en vastgoed. Eerlijke uitleg over vermogensopbouw en financiële vrijheid." canonical="/extra-inkomen" />
       <PageHero
         badge="Extra inkomen"
         title={<>Geld verdienen <em className="text-brand-500 not-italic">terwijl je slaapt</em></>}
@@ -96,6 +99,7 @@ const schuldenArticles = [
 export function Schulden() {
   return (
     <>
+      <SEO title="Uit de schulden: hulp en stappenplan" description="Hulp bij schulden in Nederland. Alle instanties, stappenplannen en gratis hulpbronnen op een rij. Begrijpelijk uitgelegd zonder jargon." canonical="/schulden" />
       <PageHero
         badge="Schulden & hulp"
         title={<>Je staat er <em className="text-brand-500 not-italic">niet alleen voor</em></>}
@@ -135,6 +139,7 @@ const verzekeringenArticles = [
 export function Verzekeringen() {
   return (
     <>
+      <SEO title="Verzekeringen vergelijken: bespaar op zorg, auto en meer" description="Vergelijk zorgverzekeringen, autoverzekeringen en inboedelverzekeringen. Vind de goedkoopste verzekering die past bij jouw situatie." canonical="/verzekeringen" />
       <PageHero
         badge="Verzekeringen"
         title={<>Bescherm wat je hebt <em className="text-brand-500 not-italic">opgebouwd</em></>}
@@ -232,6 +237,7 @@ export function Blog() {
 export function OverOns() {
   return (
     <>
+      <SEO title="Over geldbewuster.nl" description="Geldbewuster.nl geeft eerlijk financieel advies voor Nederland. Zonder jargon, zonder verborgen agenda. Lees meer over onze missie." canonical="/over-ons" />
       <PageHero
         badge="Over ons"
         title="Wie is geldbewuster.nl?"

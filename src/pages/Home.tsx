@@ -12,10 +12,10 @@ const categories = [
 ]
 
 const featured = [
-  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2025 — de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen', affiliate: false },
+  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2025: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen', affiliate: false },
   { tag: 'Schulden', title: 'Uit de schulden: welke instanties kunnen je helpen?', summary: 'Een overzicht van alle Nederlandse instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/schulden', affiliate: false },
-  { tag: 'Crypto', title: 'Bitcoin kopen als beginner — veilig en goedkoop', summary: 'Hoe je je eerste Bitcoin koopt zonder teveel te betalen en zonder gedoe.', readTime: 5, path: '/beleggen', affiliate: true },
-  { tag: "ETF's", title: "Wat is een ETF en waarom kiezen zoveel mensen ervoor?", summary: "Indexfondsen uitgelegd in gewone taal — en waarom ze voor de meeste mensen de slimste keuze zijn.", readTime: 7, path: '/beleggen', affiliate: false },
+  { tag: 'Crypto', title: 'Bitcoin kopen als beginner. Veilig en goedkoop', summary: 'Hoe je je eerste Bitcoin koopt zonder teveel te betalen en zonder gedoe.', readTime: 5, path: '/beleggen', affiliate: true },
+  { tag: "ETF's", title: "Wat is een ETF en waarom kiezen zoveel mensen ervoor?", summary: "Indexfondsen uitgelegd in gewone taal, en waarom ze voor de meeste mensen de slimste keuze zijn.", readTime: 7, path: '/beleggen', affiliate: false },
 ]
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
           <path d="M0 390 C220 365 450 400 700 375 C950 350 1100 385 1200 368 L1200 500 L0 500Z" fill="#1D9E75" opacity="0.04"/>
         </svg>
         <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-5">
-          Eerlijk financieel advies voor Nederland
+          De plek voor al jouw financiële vragen
         </span>
         <h1 className="font-serif text-4xl md:text-5xl font-normal leading-tight mb-5 max-w-2xl mx-auto">
           Geld kan ingewikkeld zijn.<br /><em className="text-brand-500 not-italic">Wij maken het simpel.</em>
@@ -74,7 +74,7 @@ export default function Home() {
 
         <div className="bg-brand-500 rounded-2xl p-10 text-center text-white">
           <h2 className="font-serif text-2xl font-normal mb-2">Klaar om te starten met beleggen?</h2>
-          <p className="text-sm opacity-80 mb-6 max-w-sm mx-auto">Open gratis een account bij DEGIRO — Nederland's populairste broker voor beginners.</p>
+          <p className="text-sm opacity-80 mb-6 max-w-sm mx-auto">Open gratis een account bij DEGIRO, Nederland's populairste broker voor beginners.</p>
           <a href={affiliateUrl('degiro', 'homepage-cta')} target="_blank" rel="noopener sponsored" className="inline-block bg-white text-brand-500 hover:opacity-90 font-medium px-8 py-3 rounded-lg transition-opacity">
             Account openen →
           </a>

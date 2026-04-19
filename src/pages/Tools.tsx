@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const tools = [
   { icon: '📈', title: 'Compound interest calculator', desc: 'Bereken wat jouw maandelijkse inleg oplevert na 10, 20 of 30 jaar bij verschillende rendementen.', path: '/tools/compound-calculator', klaar: true },
@@ -12,6 +14,7 @@ const tools = [
 export default function Tools() {
   return (
     <>
+      <SEO title="Gratis financiële tools en calculators" description="Bereken je vermogensgroei, schuldenvrij datum, pensioen en meer. Zes gratis calculators voor slimmere financiële keuzes." canonical="/tools" />
       <div className="bg-gray-50 border-b border-gray-200 py-14 px-6 text-center">
         <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-4">Tools</span>
         <h1 className="font-serif text-3xl md:text-4xl font-normal leading-tight mb-4">

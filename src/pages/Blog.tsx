@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 
 const allArticles = [
@@ -47,6 +48,7 @@ export default function Blog() {
 
   return (
     <>
+      <SEO title="Blog: alle artikelen over geld en financiën" description="Eerlijke, praktische artikelen over beleggen, sparen, schulden, verzekeringen en meer. Zoek en filter op onderwerp." canonical="/blog" />
       {/* HERO */}
       <div className="bg-gray-50 border-b border-gray-200 py-14 px-6 text-center">
         <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-4">Blog</span>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { affiliateUrl } from '../config/affiliate'
 import { TrustBar, ArticleCard } from '../components/UI'
 
@@ -21,6 +22,7 @@ const featured = [
 export default function Home() {
   return (
     <>
+      <SEO title="De plek voor al jouw financiële vragen" description="Geldbewuster.nl helpt je door de wereld van financiën. Alles over beleggen, sparen, schulden en verzekeringen. Begrijpelijk uitgelegd." canonical="/" />
       <div className="relative overflow-hidden border-b border-gray-200 py-20 px-6 text-center" style={{background: '#FAF7F2'}}>
         <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 280 C200 230 450 310 700 260 C900 220 1050 280 1200 245 L1200 500 L0 500Z" fill="#1D9E75" opacity="0.05"/>
@@ -28,7 +30,7 @@ export default function Home() {
           <path d="M0 390 C220 365 450 400 700 375 C950 350 1100 385 1200 368 L1200 500 L0 500Z" fill="#1D9E75" opacity="0.04"/>
         </svg>
         <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-5">
-          Eerlijk financieel advies voor Nederland
+          De plek voor al jouw financiële vragen
         </span>
         <h1 className="font-serif text-4xl md:text-5xl font-normal leading-tight mb-5 max-w-2xl mx-auto">
           Geld kan ingewikkeld zijn.<br /><em className="text-brand-500 not-italic">Wij maken het simpel.</em>
