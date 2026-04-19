@@ -31,10 +31,10 @@ export default function Home() {
           Eerlijk financieel advies voor Nederland
         </span>
         <h1 className="font-serif text-4xl md:text-5xl font-normal leading-tight mb-5 max-w-2xl mx-auto">
-          Word <em className="text-brand-500 not-italic">geldbewuster</em><br />met elke keuze die je maakt
+          Geld kan ingewikkeld zijn.<br /><em className="text-brand-500 not-italic">Wij maken het simpel.</em>
         </h1>
-        <p className="text-gray-500 text-lg max-w-md mx-auto mb-8 leading-relaxed">
-          Van schulden aflossen tot beleggen in ETF's — wij leggen het uit zonder jargon.
+        <p className="text-gray-500 text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+          Of je nu wilt starten met beleggen, je vermogen wilt laten groeien, slimmer wilt budgetteren of hulp nodig hebt bij schulden. Geldbewuster.nl helpt je door de wereld van financiën heen.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a href={affiliateUrl('degiro', 'homepage-hero')} target="_blank" rel="noopener sponsored" className="inline-block bg-brand-500 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-lg transition-colors">
@@ -44,23 +44,19 @@ export default function Home() {
             Hulp bij schulden
           </Link>
         </div>
-        <p className="text-xs text-gray-400 mt-3">Bevat affiliate links — geen extra kosten voor jou</p>
+
       </div>
 
-      <TrustBar items={['Onafhankelijk', 'Zonder jargon', 'Eerlijke vergelijking', 'Actueel']} />
+      <TrustBar items={['Onafhankelijk', 'Begrijpelijk uitgelegd', 'Altijd actueel', 'Eerlijke vergelijkingen']} />
 
       <div className="max-w-5xl mx-auto px-6 py-14 space-y-14">
         <section>
-          <div className="mb-6">
-            <h2 className="font-serif text-2xl font-normal mb-1">Waar wil je mee beginnen?</h2>
-            <p className="text-sm text-gray-400">Kies een onderwerp dat past bij jouw situatie</p>
-          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {categories.map(cat => (
-              <Link key={cat.path} to={cat.path} className="bg-white border border-gray-200 rounded-xl p-5 hover:border-brand-500 transition-colors group">
-                <div className={`w-10 h-10 ${cat.color} rounded-lg flex items-center justify-center text-xl mb-3`}>{cat.icon}</div>
-                <p className="font-medium text-sm mb-1 group-hover:text-brand-500 transition-colors">{cat.label}</p>
-                <p className="text-xs text-gray-400">{cat.desc}</p>
+              <Link key={cat.path} to={cat.path} className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group">
+                <div className={`w-11 h-11 ${cat.color} rounded-xl flex items-center justify-center text-xl mb-4`}>{cat.icon}</div>
+                <p className="font-medium text-sm mb-1.5 group-hover:text-brand-500 transition-colors">{cat.label}</p>
+                <p className="text-xs text-gray-400 leading-relaxed">{cat.desc}</p>
               </Link>
             ))}
           </div>
@@ -82,7 +78,7 @@ export default function Home() {
           <a href={affiliateUrl('degiro', 'homepage-cta')} target="_blank" rel="noopener sponsored" className="inline-block bg-white text-brand-500 hover:opacity-90 font-medium px-8 py-3 rounded-lg transition-opacity">
             Account openen →
           </a>
-          <p className="text-xs opacity-50 mt-3">Affiliate link — geen extra kosten voor jou</p>
+
         </div>
       </div>
     </>
