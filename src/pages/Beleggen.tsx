@@ -4,7 +4,7 @@ import { affiliateUrl } from '../config/affiliate'
 
 const articles = [
   { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen/beginnen-met-beleggen', live: true, affiliate: false },
-  { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: true, affiliate: true },
+  { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: true, affiliate: true, label: 'Broker review' },
   { tag: 'Broker', title: 'Trading 212 review. Gratis beleggen, maar wat zijn de haken?', summary: 'Trading 212 biedt gratis beleggen. Maar hoe verdienen ze dan geld? En is het veilig?', readTime: 5, path: '/beleggen', live: false, affiliate: true },
   { tag: 'Broker', title: 'DEGIRO vs Trading 212. Welke is beter?', summary: 'Een eerlijke vergelijking van de twee populairste brokers in Nederland.', readTime: 7, path: '/beleggen', live: false, affiliate: true },
   { tag: "ETF's", title: "Wat is een ETF? Uitgelegd in gewone taal", summary: "Indexfondsen zijn de slimste manier om te beleggen voor de meeste mensen. Dit is waarom.", readTime: 6, path: '/beleggen', live: false, affiliate: false },

@@ -12,8 +12,8 @@ export function PageHero({ badge, title, subtitle }: { badge: string; title: Rea
 }
 
 // Article card
-export function ArticleCard({ tag, title, summary, readTime, path, affiliate, live = true }: {
-  tag: string; title: string; summary: string; readTime: number; path: string; affiliate?: boolean; live?: boolean
+export function ArticleCard({ tag, title, summary, readTime, path, affiliate, live = true, label }: {
+  tag: string; title: string; summary: string; readTime: number; path: string; affiliate?: boolean; live?: boolean; label?: string
 }) {
   if (!live) {
     return (
@@ -32,7 +32,7 @@ export function ArticleCard({ tag, title, summary, readTime, path, affiliate, li
     <Link to={path} className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-brand-500 transition-colors group">
       <div className="flex items-center justify-between mb-3">
         <span className="text-xs font-medium text-brand-500 uppercase tracking-wide">{tag}</span>
-        {affiliate && <span className="text-xs bg-brand-50 text-green-700 px-2 py-0.5 rounded-full">Vergelijker</span>}
+        {affiliate && <span className="text-xs bg-brand-50 text-green-700 px-2 py-0.5 rounded-full">{label || 'Vergelijker'}</span>}
       </div>
       <h3 className="font-medium text-sm leading-snug mb-2 group-hover:text-brand-500 transition-colors">{title}</h3>
       <p className="text-xs text-gray-400 leading-relaxed mb-3">{summary}</p>
