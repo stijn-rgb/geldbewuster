@@ -3,12 +3,12 @@ import { PageHero, ArticleCard, AffiliateCTA, SectionHeader, InfoCard } from '..
 import { affiliateUrl } from '../config/affiliate'
 
 const articles = [
-  { tag: 'Verzekeringen', title: 'Welke verzekeringen heb je écht nodig?', summary: 'Niet elke verzekering is het waard. Dit zijn de verzekeringen die je sowieso moet hebben.', readTime: 6, path: '/beschermen', affiliate: false },
-  { tag: 'Zorgverzekering', title: 'Zorgverzekering vergelijken 2025, bespaar honderden euro\'s', summary: 'Hoe je de beste zorgverzekering voor jouw situatie vindt en hoeveel je kunt besparen.', readTime: 7, path: '/beschermen', affiliate: true },
-  { tag: 'Autoverzekering', title: 'Autoverzekering vergelijken, WA, beperkt of all-risk?', summary: 'Welke autoverzekering past bij jouw auto en rijgedrag? We leggen de verschillen uit.', readTime: 5, path: '/beschermen', affiliate: true },
-  { tag: 'Inboedel', title: 'Inboedelverzekering, heb je die nodig?', summary: 'Voor wie is een inboedelverzekering slim, en waar moet je op letten bij het afsluiten?', readTime: 4, path: '/beschermen', affiliate: true },
-  { tag: 'Noodfonds', title: 'Noodfonds opbouwen. Hoeveel heb je nodig?', summary: 'Een noodfonds is de basis van financiële gezondheid. Zo bouw je er een op.', readTime: 5, path: '/beschermen', affiliate: false },
-  { tag: 'Leven', title: 'Levensverzekering, wanneer is het slim?', summary: 'Een levensverzekering is niet voor iedereen nodig. Dit zijn de situaties waarin het slim is.', readTime: 6, path: '/beschermen', affiliate: false },
+  { tag: 'Verzekeringen', title: 'Welke verzekeringen heb je écht nodig?', summary: 'Niet elke verzekering is het waard. Dit zijn de verzekeringen die je sowieso moet hebben.', readTime: 6, path: '/beschermen', live: false, affiliate: false },
+  { tag: 'Zorgverzekering', title: 'Zorgverzekering vergelijken 2026, bespaar honderden euro\'s', summary: 'Hoe je de beste zorgverzekering voor jouw situatie vindt en hoeveel je kunt besparen.', readTime: 7, path: '/beschermen', live: false, affiliate: true },
+  { tag: 'Autoverzekering', title: 'Autoverzekering vergelijken, WA, beperkt of all-risk?', summary: 'Welke autoverzekering past bij jouw auto en rijgedrag? We leggen de verschillen uit.', readTime: 5, path: '/beschermen', live: false, affiliate: true },
+  { tag: 'Inboedel', title: 'Inboedelverzekering, heb je die nodig?', summary: 'Voor wie is een inboedelverzekering slim, en waar moet je op letten bij het afsluiten?', readTime: 4, path: '/beschermen', live: false, affiliate: true },
+  { tag: 'Noodfonds', title: 'Noodfonds opbouwen. Hoeveel heb je nodig?', summary: 'Een noodfonds is de basis van financiële gezondheid. Zo bouw je er een op.', readTime: 5, path: '/beschermen', live: false, affiliate: false },
+  { tag: 'Leven', title: 'Levensverzekering, wanneer is het slim?', summary: 'Een levensverzekering is niet voor iedereen nodig. Dit zijn de situaties waarin het slim is.', readTime: 6, path: '/beschermen', live: false, affiliate: false },
 ]
 
 export function Beschermen() {
@@ -44,14 +44,14 @@ export function Beschermen() {
 
 // Oplossen page
 const oplossenArticles = [
-  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht maken tot betalingsregelingen treffen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/oplossen', affiliate: false },
-  { tag: 'Schuldhulp', title: 'Schuldhulpverlening in Nederland, wie helpt jou?', summary: 'Een overzicht van alle instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/oplossen', affiliate: false },
-  { tag: 'Schuldhulp', title: 'Wat doet de Kredietbank Nederland?', summary: 'De Kredietbank kan je helpen met schuldsanering en budgetbeheer. Zo werkt het.', readTime: 5, path: '/oplossen', affiliate: false },
-  { tag: 'WSNP', title: 'WSNP uitgelegd, wat is schuldsanering?', summary: 'De Wet Schuldsanering Natuurlijke Personen is een laatste redmiddel. Dit is hoe het werkt.', readTime: 7, path: '/oplossen', affiliate: false },
-  { tag: 'Budget', title: 'Nibud budgettools, gratis hulp bij je financiën', summary: 'Het Nibud heeft gratis tools waarmee je jouw budget inzichtelijk maakt.', readTime: 4, path: '/oplossen', affiliate: false },
-  { tag: 'Studieschuld', title: 'DUO studieschuld aflossen. Wat zijn je opties?', summary: 'Hoeveel moet je terugbetalen en wat zijn de regels? Alles over DUO schulden.', readTime: 6, path: '/oplossen', affiliate: false },
-  { tag: 'Hulp', title: 'Sociaal Raadslieden, gratis juridisch advies', summary: 'Sociaal Raadslieden geven gratis advies over schulden, uitkeringen en toeslagen.', readTime: 4, path: '/oplossen', affiliate: false },
-  { tag: 'Schulden', title: 'Betalingsregeling treffen met schuldeisers', summary: 'Kun je een rekening niet betalen? Zo vraag je een betalingsregeling aan.', readTime: 5, path: '/oplossen', affiliate: false },
+  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht maken tot betalingsregelingen treffen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'Schuldhulp', title: 'Schuldhulpverlening in Nederland, wie helpt jou?', summary: 'Een overzicht van alle instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'Schuldhulp', title: 'Wat doet de Kredietbank Nederland?', summary: 'De Kredietbank kan je helpen met schuldsanering en budgetbeheer. Zo werkt het.', readTime: 5, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'WSNP', title: 'WSNP uitgelegd, wat is schuldsanering?', summary: 'De Wet Schuldsanering Natuurlijke Personen is een laatste redmiddel. Dit is hoe het werkt.', readTime: 7, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'Budget', title: 'Nibud budgettools, gratis hulp bij je financiën', summary: 'Het Nibud heeft gratis tools waarmee je jouw budget inzichtelijk maakt.', readTime: 4, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'Studieschuld', title: 'DUO studieschuld aflossen. Wat zijn je opties?', summary: 'Hoeveel moet je terugbetalen en wat zijn de regels? Alles over DUO schulden.', readTime: 6, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'Hulp', title: 'Sociaal Raadslieden, gratis juridisch advies', summary: 'Sociaal Raadslieden geven gratis advies over schulden, uitkeringen en toeslagen.', readTime: 4, path: '/oplossen', live: false, affiliate: false },
+  { tag: 'Schulden', title: 'Betalingsregeling treffen met schuldeisers', summary: 'Kun je een rekening niet betalen? Zo vraag je een betalingsregeling aan.', readTime: 5, path: '/oplossen', live: false, affiliate: false },
 ]
 
 export function Oplossen() {
@@ -85,12 +85,12 @@ export function Oplossen() {
 
 // Slim Leven page
 const slimArticles = [
-  { tag: 'Besparen', title: 'Besparen op boodschappen. 15 praktische tips', summary: 'Kleine aanpassingen in je boodschappenpatroon kunnen honderden euro\'s per jaar schelen.', readTime: 6, path: '/slim-leven', affiliate: false },
-  { tag: 'Abonnementen', title: 'Abonnementen opzeggen. De complete checklist', summary: 'Hoeveel abonnementen betaal je zonder het te weten? Gebruik onze checklist.', readTime: 4, path: '/slim-leven', affiliate: false },
-  { tag: 'Energie', title: 'Goedkoopste energieleverancier 2025, vergelijk en bespaar', summary: 'Energie vergelijken loont nog steeds. Zo vind je de goedkoopste leverancier voor jou.', readTime: 5, path: '/slim-leven', affiliate: true },
-  { tag: 'Budget', title: 'Budget maken in 5 stappen. Zo houd je overzicht', summary: 'Een budget hoeft niet ingewikkeld te zijn. Met dit stappenplan ben je in een uur klaar.', readTime: 5, path: '/slim-leven', affiliate: false },
-  { tag: 'Budget', title: 'De 50/30/20 regel uitgelegd', summary: 'De populairste budgetmethode ter wereld. Werkt het ook voor jou?', readTime: 4, path: '/slim-leven', affiliate: false },
-  { tag: 'Cashback', title: 'Cashback apps Nederland, gratis geld terugkrijgen', summary: 'Met cashback apps krijg je geld terug op aankopen die je toch al doet.', readTime: 5, path: '/slim-leven', affiliate: false },
+  { tag: 'Besparen', title: 'Besparen op boodschappen. 15 praktische tips', summary: 'Kleine aanpassingen in je boodschappenpatroon kunnen honderden euro\'s per jaar schelen.', readTime: 6, path: '/slim-leven', live: false, affiliate: false },
+  { tag: 'Abonnementen', title: 'Abonnementen opzeggen. De complete checklist', summary: 'Hoeveel abonnementen betaal je zonder het te weten? Gebruik onze checklist.', readTime: 4, path: '/slim-leven', live: false, affiliate: false },
+  { tag: 'Energie', title: 'Goedkoopste energieleverancier 2026, vergelijk en bespaar', summary: 'Energie vergelijken loont nog steeds. Zo vind je de goedkoopste leverancier voor jou.', readTime: 5, path: '/slim-leven', live: false, affiliate: true },
+  { tag: 'Budget', title: 'Budget maken in 5 stappen. Zo houd je overzicht', summary: 'Een budget hoeft niet ingewikkeld te zijn. Met dit stappenplan ben je in een uur klaar.', readTime: 5, path: '/slim-leven', live: false, affiliate: false },
+  { tag: 'Budget', title: 'De 50/30/20 regel uitgelegd', summary: 'De populairste budgetmethode ter wereld. Werkt het ook voor jou?', readTime: 4, path: '/slim-leven', live: false, affiliate: false },
+  { tag: 'Cashback', title: 'Cashback apps Nederland, gratis geld terugkrijgen', summary: 'Met cashback apps krijg je geld terug op aankopen die je toch al doet.', readTime: 5, path: '/slim-leven', live: false, affiliate: false },
 ]
 
 export function SlimLeven() {
@@ -120,12 +120,12 @@ export function SlimLeven() {
 
 // Vergelijker page
 const vergelijkerItems = [
-  { tag: 'Brokers', title: 'Beste brokers van 2025, eerlijk vergeleken', summary: 'DEGIRO, Trading 212, Saxo Bank, Peaks, wij zetten ze naast elkaar.', readTime: 8, path: '/vergelijker', affiliate: true },
-  { tag: 'Sparen', title: 'Beste spaarrekeningen 2025. Hoogste rente', summary: 'Welke bank biedt de hoogste spaarrente? Ons actuele overzicht.', readTime: 5, path: '/vergelijker', affiliate: true },
-  { tag: 'Crypto', title: 'Beste crypto exchanges Nederland 2025', summary: 'Bitvavo, Coinbase, Kraken, welke exchange is het best voor Nederlandse gebruikers?', readTime: 6, path: '/vergelijker', affiliate: true },
-  { tag: 'Verzekeringen', title: 'Zorgverzekering vergelijken, bespaar tot €500', summary: 'Vergelijk alle grote zorgverzekeraars op prijs en dekking.', readTime: 7, path: '/vergelijker', affiliate: true },
-  { tag: 'Energie', title: 'Energieleveranciers vergelijken 2025', summary: 'Stroom en gas, welke leverancier is het goedkoopst voor jouw verbruik?', readTime: 5, path: '/vergelijker', affiliate: true },
-  { tag: 'Hypotheek', title: 'Hypotheek vergelijken, zo vind je de laagste rente', summary: 'Alles over hypotheken vergelijken en waar je op moet letten als starter.', readTime: 9, path: '/vergelijker', affiliate: true },
+  { tag: 'Brokers', title: 'Beste brokers van 2026, eerlijk vergeleken', summary: 'DEGIRO, Trading 212, Saxo Bank, Peaks, wij zetten ze naast elkaar.', readTime: 8, path: '/vergelijker', live: false, affiliate: true },
+  { tag: 'Sparen', title: 'Beste spaarrekeningen 2026. Hoogste rente', summary: 'Welke bank biedt de hoogste spaarrente? Ons actuele overzicht.', readTime: 5, path: '/vergelijker', live: false, affiliate: true },
+  { tag: 'Crypto', title: 'Beste crypto exchanges Nederland 2026', summary: 'Bitvavo, Coinbase, Kraken, welke exchange is het best voor Nederlandse gebruikers?', readTime: 6, path: '/vergelijker', live: false, affiliate: true },
+  { tag: 'Verzekeringen', title: 'Zorgverzekering vergelijken, bespaar tot €500', summary: 'Vergelijk alle grote zorgverzekeraars op prijs en dekking.', readTime: 7, path: '/vergelijker', live: false, affiliate: true },
+  { tag: 'Energie', title: 'Energieleveranciers vergelijken 2026', summary: 'Stroom en gas, welke leverancier is het goedkoopst voor jouw verbruik?', readTime: 5, path: '/vergelijker', live: false, affiliate: true },
+  { tag: 'Hypotheek', title: 'Hypotheek vergelijken, zo vind je de laagste rente', summary: 'Alles over hypotheken vergelijken en waar je op moet letten als starter.', readTime: 9, path: '/vergelijker', live: false, affiliate: true },
 ]
 
 export function Vergelijker() {
@@ -142,7 +142,7 @@ export function Vergelijker() {
           <p className="text-xs text-green-700">Alle vergelijkingspagina's bevatten affiliate links. Wij ontvangen een vergoeding als je via onze link een product afneemt, zonder extra kosten voor jou. Dit heeft geen invloed op onze beoordeling.</p>
         </div>
         <section>
-          <SectionHeader title="Alle vergelijkingen" subtitle="Actueel bijgehouden voor 2025" />
+          <SectionHeader title="Alle vergelijkingen" subtitle="Actueel bijgehouden voor 2026" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {vergelijkerItems.map(a => <ArticleCard key={a.title} {...a} />)}
           </div>
@@ -154,12 +154,12 @@ export function Vergelijker() {
 
 // Persoonlijk page
 const persoonlijkArticles = [
-  { tag: 'Belasting', title: 'Belastingaangifte doen als beginner, stap voor stap', summary: 'Je eerste belastingaangifte hoeft niet ingewikkeld te zijn. Dit is hoe het werkt.', readTime: 8, path: '/persoonlijk', affiliate: false },
-  { tag: 'Belasting', title: 'Box 3 uitgelegd, belasting over je vermogen', summary: 'Hoe werkt de vermogensbelasting in Nederland en hoeveel betaal je?', readTime: 6, path: '/persoonlijk', affiliate: false },
-  { tag: 'Hypotheek', title: 'Hypotheek als starter, wat kun je lenen?', summary: 'Als starter op de woningmarkt is een hypotheek complex. Dit zijn de basics.', readTime: 7, path: '/persoonlijk', affiliate: false },
-  { tag: 'ZZP', title: 'ZZP financiën op orde, van BTW tot pensioen', summary: 'Als zzp\'er regel je alles zelf. Dit is een overzicht van wat je moet weten.', readTime: 9, path: '/persoonlijk', affiliate: false },
-  { tag: 'Toeslagen', title: 'Toeslagen checken, waar heb je recht op?', summary: 'Veel mensen laten toeslagen liggen. Check of jij recht hebt op huurtoeslag, zorgtoeslag of kinderbijslag.', readTime: 5, path: '/persoonlijk', affiliate: false },
-  { tag: 'Salaris', title: 'Salaris onderhandelen, zo doe je het succesvol', summary: 'De meeste mensen onderhandelen niet over hun salaris. Degenen die het wél doen verdienen gemiddeld 7% meer.', readTime: 6, path: '/persoonlijk', affiliate: false },
+  { tag: 'Belasting', title: 'Belastingaangifte doen als beginner, stap voor stap', summary: 'Je eerste belastingaangifte hoeft niet ingewikkeld te zijn. Dit is hoe het werkt.', readTime: 8, path: '/persoonlijk', live: false, affiliate: false },
+  { tag: 'Belasting', title: 'Box 3 uitgelegd, belasting over je vermogen', summary: 'Hoe werkt de vermogensbelasting in Nederland en hoeveel betaal je?', readTime: 6, path: '/persoonlijk', live: false, affiliate: false },
+  { tag: 'Hypotheek', title: 'Hypotheek als starter, wat kun je lenen?', summary: 'Als starter op de woningmarkt is een hypotheek complex. Dit zijn de basics.', readTime: 7, path: '/persoonlijk', live: false, affiliate: false },
+  { tag: 'ZZP', title: 'ZZP financiën op orde, van BTW tot pensioen', summary: 'Als zzp\'er regel je alles zelf. Dit is een overzicht van wat je moet weten.', readTime: 9, path: '/persoonlijk', live: false, affiliate: false },
+  { tag: 'Toeslagen', title: 'Toeslagen checken, waar heb je recht op?', summary: 'Veel mensen laten toeslagen liggen. Check of jij recht hebt op huurtoeslag, zorgtoeslag of kinderbijslag.', readTime: 5, path: '/persoonlijk', live: false, affiliate: false },
+  { tag: 'Salaris', title: 'Salaris onderhandelen, zo doe je het succesvol', summary: 'De meeste mensen onderhandelen niet over hun salaris. Degenen die het wél doen verdienen gemiddeld 7% meer.', readTime: 6, path: '/persoonlijk', live: false, affiliate: false },
 ]
 
 export function Persoonlijk() {
