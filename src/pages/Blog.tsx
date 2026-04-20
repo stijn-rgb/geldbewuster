@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const allArticles = [
   { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen/beginnen-met-beleggen', live: true, affiliate: false },
-  { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: false, affiliate: true },
+  { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: true, affiliate: true },
   { tag: "ETF's", title: "Beste ETF's voor Nederlandse beleggers 2026", summary: "IWDA, VWRL, VUSA, welke indexfondsen zijn het meest geschikt voor een Nederlandse belegger?", readTime: 9, path: '/beleggen/beste-etfs', live: false, affiliate: true },
   { tag: 'Crypto', title: 'Bitcoin kopen in Nederland: veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2026, zonder gedoe.', readTime: 5, path: '/beleggen/bitcoin-kopen', live: false, affiliate: true },
   { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/schulden/uit-de-schulden', live: false, affiliate: false },
@@ -49,7 +49,7 @@ export default function Blog() {
     <>
       <SEO title="Blog: alle artikelen over geld en financiën" description="Eerlijke, praktische artikelen over beleggen, sparen, schulden, verzekeringen en meer. Zoek en filter op onderwerp." canonical="/blog" />
 
-      <div className="bg-gray-50 border-b border-gray-200 py-14 px-6 text-center">
+      <div className="border-b border-gray-200 py-14 px-6 text-center" style={{background: '#FAF7F2'}}>
         <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-4">Blog</span>
         <h1 className="font-serif text-3xl md:text-4xl font-normal leading-tight mb-4">
           Alle artikelen over <em className="text-brand-500 not-italic">geld & financiën</em>

@@ -11,6 +11,7 @@ import Tools from './pages/Tools'
 import Blog from './pages/Blog'
 import OverOns from './pages/OverOns'
 import BeginnenMetBeleggen from './pages/articles/BeginnenMetBeleggen'
+import DegiroReview from './pages/articles/DegiroReview'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/tools/pensioen-calculator" element={<PensioenCalculator />} />
           <Route path="/tools/broker-vergelijker" element={<BrokerVergelijker />} />
           <Route path="/beleggen/beginnen-met-beleggen" element={<BeginnenMetBeleggen />} />
+        <Route path="/beleggen/degiro-review" element={<DegiroReview />} />
         </Routes>
       </Layout>
     </>
