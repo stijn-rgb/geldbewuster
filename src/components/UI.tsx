@@ -12,9 +12,22 @@ export function PageHero({ badge, title, subtitle }: { badge: string; title: Rea
 }
 
 // Article card
-export function ArticleCard({ tag, title, summary, readTime, path, affiliate }: {
-  tag: string; title: string; summary: string; readTime: number; path: string; affiliate?: boolean
+export function ArticleCard({ tag, title, summary, readTime, path, affiliate, live = true }: {
+  tag: string; title: string; summary: string; readTime: number; path: string; affiliate?: boolean; live?: boolean
 }) {
+  if (!live) {
+    return (
+      <div className="block bg-white border border-gray-100 rounded-xl p-5 opacity-60">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-xs font-medium text-brand-500 uppercase tracking-wide">{tag}</span>
+          <span className="text-xs bg-gray-100 text-gray-500 px-2.5 py-1 rounded-full">Binnenkort</span>
+        </div>
+        <h3 className="font-medium text-sm leading-snug mb-2 text-gray-500">{title}</h3>
+        <p className="text-xs text-gray-300 leading-relaxed mb-3">{summary}</p>
+        <span className="text-xs text-gray-300">{readTime} min leestijd</span>
+      </div>
+    )
+  }
   return (
     <Link to={path} className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-brand-500 transition-colors group">
       <div className="flex items-center justify-between mb-3">
