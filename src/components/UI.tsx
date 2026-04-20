@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 // Page hero
 export function PageHero({ badge, title, subtitle }: { badge: string; title: React.ReactNode; subtitle: string }) {
   return (
-    <div className="bg-gray-50 border-b border-gray-200 py-14 px-6 text-center">
+    <div className="border-b border-gray-200 py-14 px-6 text-center" style={{background: '#FAF7F2'}}>
       <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-4">{badge}</span>
       <h1 className="font-serif text-3xl md:text-4xl font-normal leading-tight mb-4">{title}</h1>
       <p className="text-gray-500 max-w-lg mx-auto leading-relaxed">{subtitle}</p>
