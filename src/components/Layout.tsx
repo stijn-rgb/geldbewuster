@@ -18,19 +18,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2]">
-      {/* FLOATING PILL NAV */}
+      {/* FLOATING NAV */}
       <div className="sticky top-0 z-20 flex justify-center px-4 pt-4 pb-2">
-        <nav className="w-full max-w-4xl bg-white/90 backdrop-blur border border-black/10 rounded-full px-2 py-1.5 flex items-center gap-1 shadow-sm">
-          <Link to="/" className="font-serif text-sm text-gray-900 pl-2 pr-3 mr-auto whitespace-nowrap flex items-center gap-1.5">
-            <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0" style={{background: '#1A1A18'}}>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <nav className="w-full max-w-4xl bg-[#FAF7F2] border border-black/10 rounded-2xl px-3 py-2 flex items-center gap-1 shadow-sm">
+
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5 mr-auto pl-1">
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{background: '#1A1A18'}}>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <rect x="1" y="9" width="3" height="5" rx="1" fill="#1D9E75" fillOpacity="0.45"/>
                 <rect x="6" y="5" width="3" height="9" rx="1" fill="#1D9E75" fillOpacity="0.72"/>
                 <rect x="11" y="1" width="3" height="13" rx="1" fill="#1D9E75"/>
                 <line x1="0.5" y1="14.5" x2="15.5" y2="14.5" stroke="#1D9E75" strokeWidth="1" strokeLinecap="round" strokeOpacity="0.4"/>
               </svg>
             </div>
-            <span>geld<span className="text-brand-500">bewuster</span>.nl</span>
+            <span className="font-sans text-sm font-semibold text-gray-900 tracking-tight">
+              geld<span className="text-brand-500">bewuster</span><span className="text-gray-300 font-normal">.nl</span>
+            </span>
           </Link>
 
           {/* Desktop links */}
@@ -39,10 +43,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-xs px-2 py-1.5 rounded-full transition-colors whitespace-nowrap ${
+                className={`text-xs px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
                   location.pathname === item.path
-                    ? 'bg-gray-100 text-gray-900 font-medium'
-                    : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
+                    ? 'bg-black/5 text-gray-900 font-medium'
+                    : 'text-gray-500 hover:bg-black/[0.03] hover:text-gray-800'
                 }`}
               >
                 {item.label}
@@ -50,20 +54,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             ))}
           </div>
 
+          {/* CTA */}
           <a
             href={affiliateUrl('degiro', 'navbar')}
             target="_blank"
             rel="noopener sponsored"
-            className="hidden md:inline-block bg-brand-500 hover:bg-brand-700 text-white text-xs font-medium px-3.5 py-2 rounded-full transition-colors ml-1 whitespace-nowrap"
+            className="hidden md:inline-block bg-brand-500 hover:bg-brand-700 text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors ml-2 whitespace-nowrap"
           >
             Start gratis →
           </a>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 text-gray-500 ml-1"
-          >
+          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-2 text-gray-500 ml-1">
             {menuOpen ? '✕' : '☰'}
           </button>
         </nav>
@@ -85,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               href={affiliateUrl('degiro', 'navbar-mobile')}
               target="_blank"
               rel="noopener sponsored"
-              className="bg-brand-500 text-white text-sm font-medium px-4 py-2.5 rounded-full text-center mt-1"
+              className="bg-brand-500 text-white text-sm font-medium px-4 py-2.5 rounded-xl text-center mt-1"
             >
               Start gratis bij DEGIRO →
             </a>
@@ -103,7 +105,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <p className="font-serif text-lg mb-3">geldbewuster.nl</p>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-6 h-6 rounded-md flex items-center justify-center" style={{background: '#1A1A18'}}>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                    <rect x="1" y="9" width="3" height="5" rx="1" fill="#1D9E75" fillOpacity="0.45"/>
+                    <rect x="6" y="5" width="3" height="9" rx="1" fill="#1D9E75" fillOpacity="0.72"/>
+                    <rect x="11" y="1" width="3" height="13" rx="1" fill="#1D9E75"/>
+                  </svg>
+                </div>
+                <span className="text-sm font-semibold text-gray-900">geld<span className="text-brand-500">bewuster</span>.nl</span>
+              </div>
               <p className="text-xs text-gray-400 leading-relaxed">Eerlijk financieel advies voor Nederland. Zonder jargon, zonder verborgen agenda.</p>
             </div>
             <div>
@@ -119,7 +130,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex flex-col gap-2">
                 <Link to="/beleggen" className="text-xs text-gray-400 hover:text-gray-600">Beginnen met beleggen</Link>
                 <Link to="/schulden" className="text-xs text-gray-400 hover:text-gray-600">Uit de schulden</Link>
-                <Link to="/beleggen" className="text-xs text-gray-400 hover:text-gray-600">Beste ETF's 2025</Link>
+                <Link to="/beleggen" className="text-xs text-gray-400 hover:text-gray-600">Beste ETFs 2026</Link>
                 <Link to="/verzekeringen" className="text-xs text-gray-400 hover:text-gray-600">Verzekeringen vergelijken</Link>
               </div>
             </div>

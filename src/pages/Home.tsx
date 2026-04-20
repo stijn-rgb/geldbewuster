@@ -13,7 +13,7 @@ const categories = [
 ]
 
 const featured = [
-  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2025: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen', affiliate: false },
+  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen/beginnen-met-beleggen', affiliate: false },
   { tag: 'Schulden', title: 'Uit de schulden: welke instanties kunnen je helpen?', summary: 'Een overzicht van alle Nederlandse instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/schulden', affiliate: false },
   { tag: 'Crypto', title: 'Bitcoin kopen als beginner. Veilig en goedkoop', summary: 'Hoe je je eerste Bitcoin koopt zonder teveel te betalen en zonder gedoe.', readTime: 5, path: '/beleggen', affiliate: true },
   { tag: "ETF's", title: "Wat is een ETF en waarom kiezen zoveel mensen ervoor?", summary: "Indexfondsen uitgelegd in gewone taal, en waarom ze voor de meeste mensen de slimste keuze zijn.", readTime: 7, path: '/beleggen', affiliate: false },

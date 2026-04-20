@@ -9,6 +9,8 @@ import Verzekeringen from './pages/Verzekeringen'
 import Tools from './pages/Tools'
 import Blog from './pages/Blog'
 import OverOns from './pages/OverOns'
+import ScrollToTop from './components/ScrollToTop'
+import BeginnenMetBeleggen from './pages/articles/BeginnenMetBeleggen'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -35,6 +37,7 @@ export default function App() {
         <Route path="/tools/budget-planner" element={<BudgetPlanner />} />
         <Route path="/tools/pensioen-calculator" element={<PensioenCalculator />} />
         <Route path="/tools/broker-vergelijker" element={<BrokerVergelijker />} />
+        <Route path="/beleggen/beginnen-met-beleggen" element={<BeginnenMetBeleggen />} />
       </Routes>
     </Layout>
   )

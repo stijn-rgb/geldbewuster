@@ -1,0 +1,7 @@
+# Force HTTPS
+http://geldbewuster.nl/* https://geldbewuster.nl/:splat 301!
+http://www.geldbewuster.nl/* https://geldbewuster.nl/:splat 301!
+https://www.geldbewuster.nl/* https://geldbewuster.nl/:splat 301!
+
+# React SPA routing
+/*    /index.html   200
