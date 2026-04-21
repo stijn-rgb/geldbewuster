@@ -101,7 +101,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-white border-t border-gray-200 py-10 mt-16">
+      <footer className="bg-[#FAF7F2] border-t border-gray-200 py-10 mt-16">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -115,7 +115,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
                 <span className="text-sm font-semibold text-gray-900">geld<span className="text-brand-500">bewuster</span>.nl</span>
               </div>
-              <p className="text-xs text-gray-400 leading-relaxed">Eerlijk financieel advies voor Nederland. Zonder jargon, zonder verborgen agenda.</p>
+              <p className="text-xs text-gray-400 leading-relaxed">De plek voor al jouw financiële vragen. Altijd onafhankelijk en actueel.</p>
             </div>
             <div>
               <p className="text-sm font-medium mb-3">Categorieën</p>
@@ -138,8 +138,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <p className="text-sm font-medium mb-3">Over</p>
               <div className="flex flex-col gap-2">
                 <Link to="/over-ons" className="text-xs text-gray-400 hover:text-gray-600">Over ons</Link>
-                <a href="#" className="text-xs text-gray-400 hover:text-gray-600">Privacybeleid</a>
-                <a href="#" className="text-xs text-gray-400 hover:text-gray-600">Disclaimer</a>
+                <Link to="/privacybeleid" className="text-xs text-gray-400 hover:text-gray-600">Privacybeleid</Link>
+                <Link to="/disclaimer" className="text-xs text-gray-400 hover:text-gray-600">Disclaimer</Link>
                 <a href="#" className="text-xs text-gray-400 hover:text-gray-600">Contact</a>
               </div>
             </div>

@@ -12,6 +12,9 @@ import Blog from './pages/Blog'
 import OverOns from './pages/OverOns'
 import BeginnenMetBeleggen from './pages/articles/BeginnenMetBeleggen'
 import DegiroReview from './pages/articles/DegiroReview'
+import UitDeSchulden from './pages/articles/UitDeSchulden'
+import Disclaimer from './pages/Disclaimer'
+import Privacybeleid from './pages/Privacybeleid'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -42,6 +45,9 @@ export default function App() {
           <Route path="/tools/broker-vergelijker" element={<BrokerVergelijker />} />
           <Route path="/beleggen/beginnen-met-beleggen" element={<BeginnenMetBeleggen />} />
         <Route path="/beleggen/degiro-review" element={<DegiroReview />} />
+        <Route path="/schulden/uit-de-schulden" element={<UitDeSchulden />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/privacybeleid" element={<Privacybeleid />} />
         </Routes>
       </Layout>
     </>
