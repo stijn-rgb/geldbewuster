@@ -24,7 +24,7 @@ export default function Privacybeleid() {
 
           <section>
             <h2 className="font-serif text-xl font-normal mb-3 text-gray-900">Wie zijn wij?</h2>
-            <p>Geldbewuster.nl is een handelsnaam van SVDB Performance, gevestigd te Amsterdam. Wij zijn verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit privacybeleid.</p>
+            <p>Geldbewuster.nl is een handelsnaam van SVDB Performance, gevestigd te Amsterdam. SVDB Performance is de juridische entiteit achter geldbewuster.nl. Wij zijn verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit privacybeleid.</p>
             <div className="mt-3 bg-gray-50 rounded-xl p-5 text-sm space-y-1">
               <p><span className="text-gray-500">Handelsnaam:</span> SVDB Performance</p>
               <p><span className="text-gray-500">KvK-nummer:</span> 98417533</p>

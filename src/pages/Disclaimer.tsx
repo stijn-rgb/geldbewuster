@@ -56,10 +56,10 @@ export default function Disclaimer() {
 
           <section>
             <h2 className="font-serif text-xl font-normal mb-3 text-gray-900">Bedrijfsgegevens</h2>
-            <p>Geldbewuster.nl is een handelsnaam van SVDB Performance.</p>
+            <p>Geldbewuster.nl is een handelsnaam van SVDB Performance, gevestigd te Amsterdam.</p>
             <div className="mt-3 bg-gray-50 rounded-xl p-5 text-sm space-y-1">
-              <p><span className="text-gray-500">Handelsnaam:</span> SVDB Performance</p>
-              <p><span className="text-gray-500">Website:</span> geldbewuster.nl</p>
+              <p><span className="text-gray-500">Handelsnaam:</span> geldbewuster.nl</p>
+              <p><span className="text-gray-500">Onderdeel van:</span> SVDB Performance</p>
               <p><span className="text-gray-500">KvK-nummer:</span> 98417533</p>
               <p><span className="text-gray-500">BTW-nummer:</span> NL005329198B08</p>
               <p><span className="text-gray-500">Adres:</span> Keurenplein 41 Box C5983, 1069CD Amsterdam</p>
