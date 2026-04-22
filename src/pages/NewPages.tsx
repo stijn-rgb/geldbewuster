@@ -4,7 +4,7 @@ import { affiliateUrl } from '../config/affiliate'
 
 // ── SPAREN ──
 const sparenArticles = [
-  { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2026. Hoogste rente', summary: 'Welke bank biedt de hoogste spaarrente? Ons actuele overzicht van alle grote aanbieders.', readTime: 5, path: '/sparen', live: false, affiliate: true },
+  { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2026: een eerlijke vergelijking', summary: 'Van Raisin tot Revolut en Bunq. Vergelijk de beste spaarrekeningen op rente, voorwaarden en kosten.', readTime: 7, path: '/sparen/beste-spaarrekening', live: true, affiliate: false },
   { tag: 'Sparen', title: 'Sparen vs beleggen. Wat is slimmer in 2026?', summary: 'Wanneer spaar je en wanneer beleg je? Het antwoord hangt af van jouw situatie.', readTime: 6, path: '/sparen', live: false, affiliate: false },
   { tag: 'Sparen', title: 'Noodfonds opbouwen. Hoeveel heb je nodig?', summary: 'Een noodfonds is de basis van financiële gezondheid. Zo bouw je er één op.', readTime: 5, path: '/sparen', live: false, affiliate: false },
   { tag: 'Besparen', title: 'Besparen op boodschappen. 15 praktische tips', summary: 'Kleine aanpassingen in je boodschappenpatroon kunnen honderden euro\'s per jaar schelen.', readTime: 6, path: '/sparen', live: false, affiliate: false },
@@ -86,7 +86,7 @@ export function ExtraInkomen() {
 
 // ── SCHULDEN ──
 const schuldenArticles = [
-  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht maken tot betalingsregelingen treffen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/schulden', live: false, affiliate: false },
+  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht maken tot betalingsregelingen treffen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/schulden/uit-de-schulden', live: true, affiliate: false },
   { tag: 'Schuldhulp', title: 'Schuldhulpverlening in Nederland, wie helpt jou gratis?', summary: 'Een overzicht van alle instanties die je gratis kunnen helpen bij schulden.', readTime: 6, path: '/schulden', live: false, affiliate: false },
   { tag: 'Schuldhulp', title: 'Wat doet de Kredietbank Nederland?', summary: 'De Kredietbank kan je helpen met schuldsanering en budgetbeheer. Zo werkt het.', readTime: 5, path: '/schulden', live: false, affiliate: false },
   { tag: 'WSNP', title: 'WSNP uitgelegd, wat is schuldsanering?', summary: 'De Wet Schuldsanering Natuurlijke Personen is een laatste redmiddel. Dit is hoe het werkt.', readTime: 7, path: '/schulden', live: false, affiliate: false },
@@ -206,11 +206,11 @@ export function Tools() {
 
 // ── BLOG ──
 const allArticles = [
-  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen', live: false, affiliate: false },
-  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap.', readTime: 10, path: '/schulden', live: false, affiliate: false },
+  { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen/beginnen-met-beleggen', live: true, affiliate: false },
+  { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap.', readTime: 10, path: '/schulden/uit-de-schulden', live: true, affiliate: false },
   { tag: "ETF's", title: "Beste ETF's voor Nederlandse beleggers 2026", summary: "IWDA, VWRL, VUSA, welke indexfondsen zijn het meest geschikt?", readTime: 9, path: '/beleggen', live: false, affiliate: true },
   { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: true, affiliate: true, label: 'Broker review' },
-  { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2026', summary: 'Welke bank biedt de hoogste spaarrente? Ons actuele overzicht.', readTime: 5, path: '/sparen', live: false, affiliate: true },
+  { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2026', summary: 'Van Raisin tot Revolut en Bunq. Vergelijk de beste spaarrekeningen op rente en voorwaarden.', readTime: 7, path: '/sparen/beste-spaarrekening', live: true, affiliate: false },
   { tag: 'Vermogen', title: 'Wanneer ben je rijk in Nederland?', summary: 'Wat betekent rijk zijn eigenlijk? We kijken naar vermogen, inkomen en gevoel.', readTime: 5, path: '/extra-inkomen', live: false, affiliate: false },
   { tag: 'Crypto', title: 'Bitcoin kopen in Nederland. Veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2026.', readTime: 5, path: '/beleggen', live: false, affiliate: true },
   { tag: 'Budget', title: 'Budget maken in 5 stappen', summary: 'Een budget hoeft niet ingewikkeld te zijn. Met dit stappenplan ben je in een uur klaar.', readTime: 5, path: '/sparen', live: false, affiliate: false },
