@@ -16,7 +16,7 @@ const featured = [
   { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen/beginnen-met-beleggen', live: true, affiliate: false },
   { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap uitgelegd.', readTime: 10, path: '/schulden/uit-de-schulden', live: true, affiliate: false },
   { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: true, affiliate: true, label: 'Broker review' },
-  { tag: "ETF's", title: "Beste ETF's voor Nederlandse beleggers 2026", summary: "IWDA, VWRL, VUSA, welke indexfondsen zijn het meest geschikt voor een Nederlandse belegger?", readTime: 9, path: '/beleggen/beste-etfs', live: false, affiliate: true },
+  { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2026: een eerlijke vergelijking', summary: 'Van Raisin tot Revolut en Bunq. Vergelijk de beste spaarrekeningen op rente, voorwaarden en kosten.', readTime: 7, path: '/sparen/beste-spaarrekening', live: true, affiliate: false },
 ]
 
 export default function Home() {
