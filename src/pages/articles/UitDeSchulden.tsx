@@ -33,7 +33,7 @@ export default function UitDeSchulden() {
             <span>Bijgewerkt april 2026</span>
           </div>
           <p className="text-gray-600 text-lg leading-relaxed border-l-2 border-red-400 pl-4">
-            Schulden hebben is zwaar. Niet alleen financieel, maar ook mentaal. De rekeningen stapelen zich op, je goochelt met het geld dat je hebt en nog moet betalen en je vermijdt je bankapp en misschien wel de post die binnenkomt. Het gaat op een gegeven moment niet alleen meer over geld, maar beïnvloedt ook andere aspecten van je leven. Het gevoel dat je er nooit uitkomt groeit met de dag. Dit gevoel herkennen meer mensen dan je denkt.
+            Schulden hebben is zwaar. Niet alleen financieel, maar ook mentaal. De rekeningen stapelen zich op. Je goochelt met het geld dat binnenkomt, vermijdt je bankapp en laat de post liever ongeopend. Het gaat op een gegeven moment niet alleen meer over geld, maar beïnvloedt ook andere aspecten van je leven. Het gevoel dat je er nooit uitkomt groeit met de dag. Dit gevoel herkennen meer mensen dan je denkt.
           </p>
         </div>
 
