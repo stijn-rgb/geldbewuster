@@ -140,7 +140,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link to="/over-ons" className="text-xs text-gray-400 hover:text-gray-600">Over ons</Link>
                 <Link to="/privacybeleid" className="text-xs text-gray-400 hover:text-gray-600">Privacybeleid</Link>
                 <Link to="/disclaimer" className="text-xs text-gray-400 hover:text-gray-600">Disclaimer</Link>
-                <a href="#" className="text-xs text-gray-400 hover:text-gray-600">Contact</a>
+                <Link to="/adverteren" className="text-xs text-gray-400 hover:text-gray-600">Adverteren</Link>
+                <a href="mailto:hallo@geldbewuster.nl" className="text-xs text-gray-400 hover:text-gray-600">Contact</a>
               </div>
             </div>
           </div>

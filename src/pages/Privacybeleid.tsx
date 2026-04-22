@@ -30,7 +30,7 @@ export default function Privacybeleid() {
               <p><span className="text-gray-500">KvK-nummer:</span> 98417533</p>
               <p><span className="text-gray-500">BTW-nummer:</span> NL005329198B08</p>
               <p><span className="text-gray-500">Adres:</span> Keurenplein 41 Box C5983, 1069CD Amsterdam</p>
-              <p><span className="text-gray-500">E-mail:</span> stijn@svdbperformance.nl</p>
+              <p><span className="text-gray-500">E-mail:</span> hallo@geldbewuster.nl</p>
             </div>
           </section>
 
@@ -140,7 +140,7 @@ export default function Privacybeleid() {
                 </li>
               ))}
             </ul>
-            <p className="mt-3 text-sm">Voor het uitoefenen van je rechten kun je contact opnemen via stijn@svdbperformance.nl. Wij reageren binnen 30 dagen op je verzoek.</p>
+            <p className="mt-3 text-sm">Voor het uitoefenen van je rechten kun je contact opnemen via hallo@geldbewuster.nl. Wij reageren binnen 30 dagen op je verzoek.</p>
             <p className="mt-3 text-sm">Je hebt ook het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens via <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-brand-500 hover:underline">autoriteitpersoonsgegevens.nl</a>.</p>
           </section>
 
@@ -156,7 +156,7 @@ export default function Privacybeleid() {
 
           <section>
             <h2 className="font-serif text-xl font-normal mb-3 text-gray-900">Contact</h2>
-            <p>Heb je vragen over dit privacybeleid of de verwerking van je persoonsgegevens? Neem dan contact op via <a href="mailto:stijn@svdbperformance.nl" className="text-brand-500 hover:underline">stijn@svdbperformance.nl</a>.</p>
+            <p>Heb je vragen over dit privacybeleid of de verwerking van je persoonsgegevens? Neem dan contact op via <a href="mailto:hallo@geldbewuster.nl" className="text-brand-500 hover:underline">hallo@geldbewuster.nl</a>.</p>
           </section>
 
         </div>

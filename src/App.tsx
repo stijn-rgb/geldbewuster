@@ -14,6 +14,7 @@ import BeginnenMetBeleggen from './pages/articles/BeginnenMetBeleggen'
 import DegiroReview from './pages/articles/DegiroReview'
 import Disclaimer from './pages/Disclaimer'
 import Privacybeleid from './pages/Privacybeleid'
+import Adverteerders from './pages/Adverteerders'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/beleggen/degiro-review" element={<DegiroReview />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/privacybeleid" element={<Privacybeleid />} />
+        <Route path="/adverteren" element={<Adverteerders />} />
         </Routes>
       </Layout>
     </>

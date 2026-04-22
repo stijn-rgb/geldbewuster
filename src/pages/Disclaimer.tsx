@@ -63,7 +63,7 @@ export default function Disclaimer() {
               <p><span className="text-gray-500">KvK-nummer:</span> 98417533</p>
               <p><span className="text-gray-500">BTW-nummer:</span> NL005329198B08</p>
               <p><span className="text-gray-500">Adres:</span> Keurenplein 41 Box C5983, 1069CD Amsterdam</p>
-              <p><span className="text-gray-500">E-mail:</span> stijn@svdbperformance.nl</p>
+              <p><span className="text-gray-500">E-mail:</span> hallo@geldbewuster.nl</p>
             </div>
           </section>
 
