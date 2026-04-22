@@ -16,6 +16,7 @@ import Disclaimer from './pages/Disclaimer'
 import Privacybeleid from './pages/Privacybeleid'
 import Adverteerders from './pages/Adverteerders'
 import UitDeSchulden from './pages/articles/UitDeSchulden'
+import BesteSpaarrekening from './pages/articles/BesteSpaarrekening'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/privacybeleid" element={<Privacybeleid />} />
         <Route path="/adverteren" element={<Adverteerders />} />
         <Route path="/schulden/uit-de-schulden" element={<UitDeSchulden />} />
+        <Route path="/sparen/beste-spaarrekening" element={<BesteSpaarrekening />} />
         </Routes>
       </Layout>
     </>
