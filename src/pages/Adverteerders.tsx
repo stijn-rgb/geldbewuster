@@ -18,7 +18,7 @@ const formats = [
   {
     naam: 'Product review',
     prijs: 'Vanaf €500',
-    beschrijving: 'Een uitgebreide en eerlijke review van jouw financieel product. Onze lezers waarderen eerlijkheid — we benoemen ook de nadelen. Dat verhoogt het vertrouwen en daarmee de conversie.',
+    beschrijving: 'Een uitgebreide en eerlijke review van jouw financieel product. Onze lezers waarderen eerlijkheid, we benoemen ook de nadelen. Dat verhoogt het vertrouwen en daarmee de conversie.',
     inclusief: ['Uitgebreide voor- en nadelenanalyse', 'Vergelijking met concurrenten', 'Beoordelingsblok met score', 'Affiliate integratie mogelijk'],
   },
   {

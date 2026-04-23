@@ -242,7 +242,7 @@ export default function BufferBerekenaarPagina() {
           <section>
             <h2 className="font-serif text-2xl font-normal mb-4">Wat is een noodfonds?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">Een noodfonds is een buffer aan spaargeld die je klaar hebt staan voor onverwachte uitgaven. Denk aan een kapotte wasmachine, een onverwachte rekening of een periode zonder inkomen. Het idee is simpel: je hebt altijd genoeg geld achter de hand zodat je niet hoeft te lenen of je langetermijn spaargeld hoeft aan te spreken.</p>
-            <p className="text-gray-600 leading-relaxed">Het noodfonds staat altijd op een <Link to="/sparen/beste-spaarrekening" className="text-brand-500 hover:underline">vrij opneembare spaarrekening</Link> — nooit in een deposito of beleggingsrekening. Je moet er altijd direct bij kunnen.</p>
+            <p className="text-gray-600 leading-relaxed">Het noodfonds staat altijd op een <Link to="/sparen/beste-spaarrekening" className="text-brand-500 hover:underline">vrij opneembare spaarrekening</Link>. Nooit in een deposito of beleggingsrekening. Je moet er altijd direct bij kunnen.</p>
           </section>
 
           <section>
@@ -272,7 +272,7 @@ export default function BufferBerekenaarPagina() {
               {[
                 { term: 'Noodfonds', uitleg: 'Een buffer aan liquide spaargeld voor onverwachte uitgaven. Altijd vrij opneembaar, nooit belegd.' },
                 { term: 'Vaste lasten', uitleg: 'Maandelijkse kosten die je altijd hebt, ongeacht je inkomen. Denk aan huur, energie, verzekeringen en boodschappen.' },
-                { term: 'Liquiditeit', uitleg: 'Hoe snel je geld beschikbaar is. Een noodfonds moet 100% liquide zijn — direct beschikbaar zonder boete.' },
+                { term: 'Liquiditeit', uitleg: 'Hoe snel je geld beschikbaar is. Een noodfonds moet 100% liquide zijn, direct beschikbaar zonder boete.' },
                 { term: 'Buffer vs spaargeld', uitleg: 'Je noodfonds is anders dan je overige spaargeld. Het noodfonds is er puur voor noodgevallen en wordt niet aangesproken voor andere doelen.' },
               ].map(item => (
                 <div key={item.term} className="flex gap-3 bg-gray-50 rounded-xl p-4">
@@ -288,7 +288,7 @@ export default function BufferBerekenaarPagina() {
 
           <section>
             <h2 className="font-serif text-2xl font-normal mb-4">Waar zet je je noodfonds?</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">Je noodfonds staat altijd op een vrij opneembare spaarrekening — nooit in een deposito of beleggingsrekening. De beste opties voor een noodfonds in Nederland:</p>
+            <p className="text-gray-600 leading-relaxed mb-4">Je noodfonds staat altijd op een vrij opneembare spaarrekening. Nooit in een deposito of beleggingsrekening. De beste opties voor een noodfonds in Nederland:</p>
             <div className="bg-white border border-gray-200 rounded-xl p-5">
               <div className="space-y-3">
                 {[

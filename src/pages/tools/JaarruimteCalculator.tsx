@@ -148,7 +148,7 @@ export default function JaarruimteCalculatorPagina() {
         <div className="space-y-8">
           <section>
             <h2 className="font-serif text-2xl font-normal mb-4">Wat is jaarruimte?</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">Jaarruimte is het maximale bedrag dat je per jaar fiscaal aftrekbaar mag storten op een lijfrenterekening of -verzekering. Dit geldt alleen als je een pensioentekort hebt — als je dus te weinig pensioen opbouwt via je werkgever.</p>
+            <p className="text-gray-600 leading-relaxed mb-4">Jaarruimte is het maximale bedrag dat je per jaar fiscaal aftrekbaar mag storten op een lijfrenterekening of -verzekering. Dit geldt alleen als je een pensioentekort hebt, als je dus te weinig pensioen opbouwt via je werkgever.</p>
             <p className="text-gray-600 leading-relaxed">De inleg binnen jouw jaarruimte is aftrekbaar van je belastbaar inkomen. Afhankelijk van je inkomen krijg je 36,97% of 49,5% terug van wat je inlegt. Dat is een aanzienlijk belastingvoordeel dat veel mensen laten liggen.</p>
           </section>
 
