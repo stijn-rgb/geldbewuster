@@ -8,13 +8,15 @@ const tools = [
   { icon: '💳', title: 'Schulden calculator', desc: 'Bereken hoe lang het duurt om je schulden af te lossen en hoeveel rente je betaalt.', path: '/tools/schulden-calculator', klaar: true },
   { icon: '📊', title: 'Budget planner', desc: 'Vul je inkomsten en uitgaven in en zie direct waar je kunt besparen.', path: '/tools/budget-planner', klaar: true },
   { icon: '🏦', title: 'Pensioen calculator', desc: 'Bereken hoeveel je maandelijks moet inleggen om op je gewenste pensioenleeftijd te stoppen.', path: '/tools/pensioen-calculator', klaar: true },
+  { icon: '🛡️', title: 'Buffer berekenaar', desc: 'Bereken hoeveel noodfonds jij nodig hebt op basis van je situatie, woonsituatie en vaste lasten.', path: '/tools/buffer-berekenaar', klaar: true },
+  { icon: '📋', title: 'Jaarruimte calculator', desc: 'Bereken hoeveel je fiscaal voordelig mag inleggen voor pensioen. Inclusief Factor A en reserveringsruimte.', path: '/tools/jaarruimte-calculator', klaar: true },
 ]
 
 export default function Tools() {
   return (
     <>
       <SEO title="Gratis financiële tools en calculators" description="Bereken je vermogensgroei, schuldenvrij datum, pensioen en meer. Zes gratis calculators voor slimmere financiële keuzes." canonical="/tools" />
-      <div className="bg-gray-50 border-b border-gray-200 py-14 px-6 text-center">
+      <div className="border-b border-gray-200 py-14 px-6 text-center" style={{background: '#FAF7F2'}}>
         <span className="inline-block bg-brand-50 text-green-800 text-xs font-medium px-4 py-1.5 rounded-full mb-4">Tools</span>
         <h1 className="font-serif text-3xl md:text-4xl font-normal leading-tight mb-4">
           Gratis financiële <em className="text-brand-500 not-italic">calculators</em>

@@ -15,6 +15,8 @@ import DegiroReview from './pages/articles/DegiroReview'
 import Disclaimer from './pages/Disclaimer'
 import Privacybeleid from './pages/Privacybeleid'
 import Adverteerders from './pages/Adverteerders'
+import BufferBerekenaar from './pages/tools/BufferBerekenaar'
+import JaarruimteCalculator from './pages/tools/JaarruimteCalculator'
 import UitDeSchulden from './pages/articles/UitDeSchulden'
 import BesteSpaarrekening from './pages/articles/BesteSpaarrekening'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
@@ -50,6 +52,8 @@ export default function App() {
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/privacybeleid" element={<Privacybeleid />} />
         <Route path="/adverteren" element={<Adverteerders />} />
+        <Route path="/tools/buffer-berekenaar" element={<BufferBerekenaar />} />
+        <Route path="/tools/jaarruimte-calculator" element={<JaarruimteCalculator />} />
         <Route path="/schulden/uit-de-schulden" element={<UitDeSchulden />} />
         <Route path="/sparen/beste-spaarrekening" element={<BesteSpaarrekening />} />
         </Routes>
