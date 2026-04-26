@@ -17,6 +17,7 @@ import Privacybeleid from './pages/Privacybeleid'
 import Adverteerders from './pages/Adverteerders'
 import BufferBerekenaar from './pages/tools/BufferBerekenaar'
 import JaarruimteCalculator from './pages/tools/JaarruimteCalculator'
+import ZorgstoeslagCalculator from './pages/tools/ZorgstoeslagCalculator'
 import UitDeSchulden from './pages/articles/UitDeSchulden'
 import BesteSpaarrekening from './pages/articles/BesteSpaarrekening'
 import WatIsEenETF from './pages/articles/WatIsEenETF'
@@ -55,6 +56,7 @@ export default function App() {
         <Route path="/adverteren" element={<Adverteerders />} />
         <Route path="/tools/buffer-berekenaar" element={<BufferBerekenaar />} />
         <Route path="/tools/jaarruimte-calculator" element={<JaarruimteCalculator />} />
+        <Route path="/tools/zorgtoeslag-berekenaar" element={<ZorgstoeslagCalculator />} />
         <Route path="/schulden/uit-de-schulden" element={<UitDeSchulden />} />
         <Route path="/sparen/beste-spaarrekening" element={<BesteSpaarrekening />} />
         <Route path="/beleggen/wat-is-een-etf" element={<WatIsEenETF />} />
