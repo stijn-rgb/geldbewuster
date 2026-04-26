@@ -11,33 +11,29 @@ function Calculator() {
   const [leeftijd, setLeeftijd] = useState('')
   const [berekend, setBerekend] = useState(false)
 
-  // 2026 officiële Belastingdienst cijfers
   const MAX_ALLEENSTAAND = 129
   const MAX_PARTNER = 258
   const GRENS_ALLEENSTAAND = 40857
   const GRENS_PARTNER = 51142
-  const DREMPEL_ALLEENSTAAND = 28406
-  const DREMPEL_PARTNER = 28406
+  const DREMPEL = 28406
   const VERMOGEN_GRENS_ALLEENSTAAND = 141896
   const VERMOGEN_GRENS_PARTNER = 179429
-  const MIN_LEEFTIJD = 18
 
   const totaalInkomen = Number(inkomen) + (partner ? Number(partnerInkomen) : 0)
   const totaalVermogen = Number(vermogen) + (partner ? Number(partnerVermogen) : 0)
   const grens = partner ? GRENS_PARTNER : GRENS_ALLEENSTAAND
-  const drempel = partner ? DREMPEL_PARTNER : DREMPEL_ALLEENSTAAND
   const maxToeslag = partner ? MAX_PARTNER : MAX_ALLEENSTAAND
   const vermogenGrens = partner ? VERMOGEN_GRENS_PARTNER : VERMOGEN_GRENS_ALLEENSTAAND
 
-  const teJong = Number(leeftijd) < MIN_LEEFTIJD && leeftijd !== ''
+  const teJong = leeftijd !== '' && Number(leeftijd) < 18
   const teVeelVermogen = vermogen !== '' && totaalVermogen > vermogenGrens
-  const teVeelInkomen = totaalInkomen >= grens
+  const teVeelInkomen = inkomen !== '' && totaalInkomen >= grens
   const geenRecht = teJong || teVeelVermogen || teVeelInkomen
 
   const berekenToeslag = () => {
     if (geenRecht) return 0
-    if (totaalInkomen <= drempel) return maxToeslag
-    const afbouw = ((totaalInkomen - drempel) / (grens - drempel)) * maxToeslag
+    if (totaalInkomen <= DREMPEL) return maxToeslag
+    const afbouw = ((totaalInkomen - DREMPEL) / (grens - DREMPEL)) * maxToeslag
     return Math.max(0, Math.round(maxToeslag - afbouw))
   }
 
@@ -48,6 +44,8 @@ function Calculator() {
     setPartner(null); setInkomen(''); setPartnerInkomen('')
     setVermogen(''); setPartnerVermogen(''); setLeeftijd(''); setBerekend(false)
   }
+
+  const formatEuro = (n: number) => '€' + n.toLocaleString('nl-NL')
 
   return (
     <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
@@ -69,12 +67,12 @@ function Calculator() {
         <div>
           <p className="text-sm font-medium text-gray-700 mb-2">Heb je een toeslagpartner?</p>
           <div className="grid grid-cols-2 gap-2">
-            {[
+            {([
               { label: 'Nee, alleenstaand', value: false, sub: 'Max. €129/mnd' },
               { label: 'Ja, met partner', value: true, sub: 'Max. €258/mnd' },
-            ].map(opt => (
+            ] as { label: string; value: boolean; sub: string }[]).map(opt => (
               <button key={String(opt.value)} onClick={() => { setPartner(opt.value); setBerekend(false) }}
-                className={\`p-3.5 rounded-xl border text-left transition-all \${partner === opt.value ? 'border-brand-500 bg-brand-50' : 'border-gray-200 hover:border-gray-300'}\`}>
+                className={['p-3.5 rounded-xl border text-left transition-all', partner === opt.value ? 'border-brand-500 bg-brand-50' : 'border-gray-200 hover:border-gray-300'].join(' ')}>
                 <p className="text-sm font-medium text-gray-900">{opt.label}</p>
                 <p className="text-xs text-gray-400">{opt.sub}</p>
               </button>
@@ -92,7 +90,7 @@ function Calculator() {
                   placeholder="28.000"
                   className="w-full pl-7 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-500" />
               </div>
-              <p className="text-xs text-gray-400 mt-1">Inclusief vakantiegeld. Vind je op je jaaropgave of loonstrook × 12,96</p>
+              <p className="text-xs text-gray-400 mt-1">Inclusief vakantiegeld. Staat op je jaaropgave.</p>
             </div>
 
             {partner === true && (
@@ -108,14 +106,14 @@ function Calculator() {
             )}
 
             <div>
-              <label className="text-xs font-medium text-gray-700 mb-1.5 block">Jouw vermogen (spaargeld, beleggingen, etc.)</label>
+              <label className="text-xs font-medium text-gray-700 mb-1.5 block">Jouw vermogen (spaargeld, beleggingen etc.)</label>
               <div className="relative">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">€</span>
                 <input type="number" value={vermogen} onChange={e => { setVermogen(e.target.value); setBerekend(false) }}
                   placeholder="10.000"
                   className="w-full pl-7 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-brand-500" />
               </div>
-              <p className="text-xs text-gray-400 mt-1">Grens: €{(partner ? 179429 : 141896).toLocaleString('nl-NL')}. Eigen woning telt niet mee.</p>
+              <p className="text-xs text-gray-400 mt-1">Grens: {formatEuro(vermogenGrens)}. Eigen woning telt niet mee.</p>
             </div>
 
             {partner === true && (
@@ -149,27 +147,27 @@ function Calculator() {
             ) : teVeelVermogen ? (
               <div className="bg-red-50 border border-red-100 rounded-2xl p-5 text-center">
                 <p className="font-medium text-sm text-red-700 mb-2">Geen recht op zorgtoeslag</p>
-                <p className="text-xs text-gray-500">Je vermogen van €{totaalVermogen.toLocaleString('nl-NL')} overschrijdt de vermogensgrens van €{vermogenGrens.toLocaleString('nl-NL')}.</p>
+                <p className="text-xs text-gray-500">Je vermogen van {formatEuro(totaalVermogen)} overschrijdt de vermogensgrens van {formatEuro(vermogenGrens)}.</p>
               </div>
             ) : teVeelInkomen ? (
               <div className="bg-red-50 border border-red-100 rounded-2xl p-5 text-center">
                 <p className="font-medium text-sm text-red-700 mb-2">Geen recht op zorgtoeslag</p>
-                <p className="text-xs text-gray-500">Je inkomen van €{totaalInkomen.toLocaleString('nl-NL')} ligt boven de inkomensgrens van €{grens.toLocaleString('nl-NL')}.</p>
+                <p className="text-xs text-gray-500">Je inkomen van {formatEuro(totaalInkomen)} ligt boven de inkomensgrens van {formatEuro(grens)}.</p>
               </div>
             ) : (
               <>
                 <div className="bg-brand-500 rounded-2xl p-5 text-white mb-4">
                   <p className="text-xs opacity-70 mb-1">Jouw zorgtoeslag 2026</p>
                   <p className="font-serif text-4xl font-normal mb-1">€{maandToeslag} <span className="text-xl opacity-70">per maand</span></p>
-                  <p className="text-xs opacity-60">€{jaarToeslag.toLocaleString('nl-NL')} per jaar</p>
+                  <p className="text-xs opacity-60">{formatEuro(jaarToeslag)} per jaar</p>
                 </div>
 
                 <div className="space-y-2 mb-4">
                   {[
-                    { label: 'Inkomen', waarde: \`€\${totaalInkomen.toLocaleString('nl-NL')}\`, ok: !teVeelInkomen },
-                    { label: 'Vermogen', waarde: vermogen ? \`€\${totaalVermogen.toLocaleString('nl-NL')}\` : 'Niet ingevuld', ok: !teVeelVermogen },
-                    { label: 'Leeftijd', waarde: \`\${leeftijd} jaar\`, ok: !teJong },
-                    { label: 'Maandelijkse toeslag', waarde: \`€\${maandToeslag}\`, ok: true },
+                    { label: 'Inkomen', waarde: formatEuro(totaalInkomen), ok: true },
+                    { label: 'Vermogen', waarde: vermogen ? formatEuro(totaalVermogen) : 'Niet ingevuld', ok: true },
+                    { label: 'Leeftijd', waarde: leeftijd + ' jaar', ok: true },
+                    { label: 'Maandelijkse toeslag', waarde: '€' + maandToeslag, ok: true },
                   ].map(item => (
                     <div key={item.label} className="flex justify-between items-center p-3 bg-gray-50 rounded-xl text-xs">
                       <span className="text-gray-500">{item.label}</span>
@@ -183,18 +181,18 @@ function Calculator() {
                   ))}
                 </div>
 
-                <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 mb-4">
+                <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 mb-2">
                   <p className="text-xs font-medium text-amber-700 mb-1">Nog geen zorgtoeslag aangevraagd?</p>
                   <p className="text-xs text-gray-500 leading-relaxed">Vraag het aan via <a href="https://www.belastingdienst.nl" target="_blank" rel="noopener noreferrer" className="text-brand-500 hover:underline">Mijn Belastingdienst</a> met je DigiD. Aanvragen voor 1 september zorgt dat je het hele jaar ontvangt.</p>
                 </div>
               </>
             )}
 
-            <button onClick={reset} className="w-full bg-gray-100 text-gray-600 font-medium text-sm py-3 rounded-xl hover:bg-gray-200 transition-colors mt-2">
+            <button onClick={reset} className="w-full bg-gray-100 text-gray-600 font-medium text-sm py-3 rounded-xl hover:bg-gray-200 transition-colors mt-3">
               Opnieuw berekenen
             </button>
 
-            <p className="text-xs text-gray-400 mt-3 leading-relaxed">Indicatieve berekening op basis van Belastingdienst cijfers 2026. De definitieve berekening wordt gedaan door de Belastingdienst.</p>
+            <p className="text-xs text-gray-400 mt-3 leading-relaxed">Indicatieve berekening op basis van Belastingdienst cijfers 2026. Er kunnen geen rechten aan worden ontleend. Controleer je definitieve recht via <a href="https://www.belastingdienst.nl" target="_blank" rel="noopener noreferrer" className="text-brand-500 hover:underline">belastingdienst.nl</a>.</p>
           </div>
         )}
       </div>
@@ -207,7 +205,7 @@ export default function ZorgstoeslagCalculatorPagina() {
     <>
       <SEO
         title="Zorgtoeslag berekenaar 2026: hoeveel krijg jij?"
-        description="Bereken in één minuut hoeveel zorgtoeslag jij in 2026 ontvangt. Inclusief actuele inkomensgrenzen, maximale bedragen en uitleg over aanvragen."
+        description="Bereken in één minuut hoeveel zorgtoeslag jij in 2026 ontvangt. Inclusief actuele inkomensgrenzen, vermogensgrenzen en uitleg over aanvragen."
         canonical="/tools/zorgtoeslag-berekenaar"
       />
 
@@ -247,20 +245,20 @@ export default function ZorgstoeslagCalculatorPagina() {
                   <tr className="bg-gray-50 border-b border-gray-100">
                     <th className="py-2.5 px-4 text-left text-xs font-medium text-gray-500">Situatie</th>
                     <th className="py-2.5 px-4 text-center text-xs font-medium text-gray-500">Max. per maand</th>
-                    <th className="py-2.5 px-4 text-center text-xs font-medium text-gray-500">Max. per jaar</th>
                     <th className="py-2.5 px-4 text-center text-xs font-medium text-gray-500">Inkomensgrens</th>
+                    <th className="py-2.5 px-4 text-center text-xs font-medium text-gray-500">Vermogensgrens</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { situatie: 'Alleenstaand', maand: '€129', jaar: '€1.548', grens: '€40.857' },
-                    { situatie: 'Met toeslagpartner', maand: '€258', jaar: '€3.096', grens: '€51.142' },
+                    { situatie: 'Alleenstaand', maand: '€129', grens: '€40.857', vermogen: '€141.896' },
+                    { situatie: 'Met toeslagpartner', maand: '€258', grens: '€51.142', vermogen: '€179.429' },
                   ].map((r, i) => (
                     <tr key={r.situatie} className={i % 2 !== 0 ? 'bg-gray-50' : ''}>
                       <td className="py-3 px-4 text-xs font-medium text-gray-700">{r.situatie}</td>
                       <td className="py-3 px-4 text-center text-xs font-medium text-brand-500">{r.maand}</td>
-                      <td className="py-3 px-4 text-center text-xs text-gray-600">{r.jaar}</td>
                       <td className="py-3 px-4 text-center text-xs text-gray-600">{r.grens}</td>
+                      <td className="py-3 px-4 text-center text-xs text-gray-600">{r.vermogen}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -271,7 +269,7 @@ export default function ZorgstoeslagCalculatorPagina() {
 
           <section>
             <h2 className="font-serif text-2xl font-normal mb-4">Wat is zorgtoeslag?</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">Zorgtoeslag is een bijdrage van de overheid om de kosten van je zorgverzekering te helpen betalen. Als je inkomen niet te hoog is, betaalt de Belastingdienst elke maand een deel van je premie voor je. De gemiddelde basisverzekering kost in 2026 rond de €150 per maand. Met de maximale zorgtoeslag van €129 betaal je als alleenstaande dus effectief nog maar €21 per maand.</p>
+            <p className="text-gray-600 leading-relaxed mb-4">Zorgtoeslag is een bijdrage van de overheid om de kosten van je zorgverzekering te helpen betalen. Als je inkomen niet te hoog is, betaalt de Belastingdienst elke maand een deel van je premie voor je. De gemiddelde basisverzekering kost in 2026 rond de €150 per maand. Met de maximale zorgtoeslag van €129 betaal je als alleenstaande effectief nog maar €21 per maand.</p>
             <p className="text-gray-600 leading-relaxed">De toeslag wordt elke maand rond de 20e uitbetaald door de Belastingdienst.</p>
           </section>
 
@@ -311,7 +309,7 @@ export default function ZorgstoeslagCalculatorPagina() {
               ))}
             </div>
             <div className="mt-4 bg-amber-50 border border-amber-100 rounded-xl p-4">
-              <p className="text-xs font-medium text-amber-700 mb-1">Let op: aanvragen voor 1 september</p>
+              <p className="text-xs font-medium text-amber-700 mb-1">Aanvragen voor 1 september</p>
               <p className="text-xs text-gray-500 leading-relaxed">Vraag je zorgtoeslag aan voor 1 september 2026, dan ontvang je toeslag over het hele jaar. Vraag je later aan, dan ontvang je toeslag vanaf de maand van aanvraag.</p>
             </div>
           </section>
@@ -320,9 +318,9 @@ export default function ZorgstoeslagCalculatorPagina() {
             <h2 className="font-serif text-2xl font-normal mb-4">Veelgemaakte fouten</h2>
             <div className="space-y-3">
               {[
-                { fout: 'Inkomen te laag inschatten', uitleg: 'Als je achteraf meer hebt verdiend dan opgegeven, moet je zorgtoeslag terugbetalen. Vergeet vakantiegeld en eventuele bonussen niet mee te rekenen.' },
-                { fout: 'Wijzigingen niet doorgeven', uitleg: 'Verander je situatie (nieuw inkomen, samenwonen, verhuizen)? Geef dit binnen 4 weken door via Mijn Toeslagen om terugvordering te voorkomen.' },
-                { fout: 'Zorgtoeslag vergeten aan te vragen', uitleg: 'De toeslag wordt niet automatisch toegekend. Je moet hem zelf aanvragen. Veel mensen laten geld liggen doordat ze niet weten dat ze er recht op hebben.' },
+                { fout: 'Inkomen te laag inschatten', uitleg: 'Als je achteraf meer hebt verdiend dan opgegeven, moet je zorgtoeslag terugbetalen. Vergeet vakantiegeld en bonussen niet.' },
+                { fout: 'Wijzigingen niet doorgeven', uitleg: 'Verander je situatie (nieuw inkomen, samenwonen, verhuizen)? Geef dit binnen 4 weken door via Mijn Toeslagen.' },
+                { fout: 'Zorgtoeslag niet aanvragen', uitleg: 'De toeslag wordt niet automatisch toegekend. Veel mensen laten geld liggen doordat ze niet weten dat ze er recht op hebben.' },
               ].map(item => (
                 <div key={item.fout} className="flex gap-3 bg-red-50 border border-red-100 rounded-xl p-4">
                   <svg className="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 6l4 4M10 6l-4 4" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round"/></svg>
@@ -354,7 +352,7 @@ export default function ZorgstoeslagCalculatorPagina() {
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 mt-6 leading-relaxed">Indicatieve berekening op basis van officiële Belastingdienst cijfers voor 2026. Er kunnen geen rechten aan worden ontleend. Controleer je definitieve recht via Mijn Belastingdienst.</p>
+        <p className="text-xs text-gray-400 mt-6 leading-relaxed">Indicatieve berekening op basis van officiële Belastingdienst cijfers voor 2026. Er kunnen geen rechten aan worden ontleend. Controleer je definitieve recht via <a href="https://www.belastingdienst.nl" target="_blank" rel="noopener noreferrer" className="text-brand-500 hover:underline">belastingdienst.nl</a>.</p>
       </div>
     </>
   )
