@@ -10,6 +10,7 @@ const tools = [
   { icon: '🏦', title: 'Pensioen calculator', desc: 'Bereken hoeveel je maandelijks moet inleggen om op je gewenste pensioenleeftijd te stoppen.', path: '/tools/pensioen-calculator', klaar: true },
   { icon: '🛡️', title: 'Buffer berekenaar', desc: 'Bereken hoeveel noodfonds jij nodig hebt op basis van je situatie, woonsituatie en vaste lasten.', path: '/tools/buffer-berekenaar', klaar: true },
   { icon: '📋', title: 'Jaarruimte calculator', desc: 'Bereken hoeveel je fiscaal voordelig mag inleggen voor pensioen. Inclusief Factor A en reserveringsruimte.', path: '/tools/jaarruimte-calculator', klaar: true },
+  { icon: '🏥', title: 'Zorgtoeslag berekenaar', desc: 'Bereken hoeveel zorgtoeslag jij in 2026 ontvangt op basis van je inkomen en situatie.', path: '/tools/zorgtoeslag-berekenaar', klaar: true },
 ]
 
 export default function Tools() {
