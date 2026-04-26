@@ -19,6 +19,7 @@ import BufferBerekenaar from './pages/tools/BufferBerekenaar'
 import JaarruimteCalculator from './pages/tools/JaarruimteCalculator'
 import UitDeSchulden from './pages/articles/UitDeSchulden'
 import BesteSpaarrekening from './pages/articles/BesteSpaarrekening'
+import WatIsEenETF from './pages/articles/WatIsEenETF'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="/tools/jaarruimte-calculator" element={<JaarruimteCalculator />} />
         <Route path="/schulden/uit-de-schulden" element={<UitDeSchulden />} />
         <Route path="/sparen/beste-spaarrekening" element={<BesteSpaarrekening />} />
+        <Route path="/beleggen/wat-is-een-etf" element={<WatIsEenETF />} />
         </Routes>
       </Layout>
     </>
