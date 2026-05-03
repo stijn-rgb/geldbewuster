@@ -129,7 +129,7 @@ export function Schulden() {
 // ── VERZEKERINGEN ──
 const verzekeringenArticles = [
   { tag: 'Verzekeringen', title: 'Welke verzekeringen heb je écht nodig?', summary: 'Niet elke verzekering is het waard. Dit zijn de verzekeringen die je sowieso moet hebben.', readTime: 6, path: '/verzekeringen', live: false, affiliate: false },
-  { tag: 'Zorgverzekering', title: 'Zorgverzekering vergelijken 2026, bespaar honderden euro\'s', summary: 'Hoe je de beste zorgverzekering voor jouw situatie vindt en hoeveel je kunt besparen.', readTime: 7, path: '/verzekeringen', live: false, affiliate: true },
+  { tag: 'Zorgverzekering', title: 'Zorgverzekering vergelijken 2026, bespaar honderden euro\'s', summary: 'Hoe je de beste zorgverzekering voor jouw situatie vindt en hoeveel je kunt besparen.', readTime: 7, path: '/verzekeringen/zorgverzekering-vergelijken', live: true, affiliate: true },
   { tag: 'Autoverzekering', title: 'Autoverzekering vergelijken, WA, beperkt of all-risk?', summary: 'Welke autoverzekering past bij jouw auto en rijgedrag? We leggen de verschillen uit.', readTime: 5, path: '/verzekeringen', live: false, affiliate: true },
   { tag: 'Inboedel', title: 'Inboedelverzekering, heb je die nodig?', summary: 'Voor wie is een inboedelverzekering slim, en waar moet je op letten bij het afsluiten?', readTime: 4, path: '/verzekeringen', live: false, affiliate: true },
   { tag: 'Energie', title: 'Goedkoopste energieleverancier 2026, vergelijk en bespaar', summary: 'Energie vergelijken loont nog steeds. Zo vind je de goedkoopste leverancier voor jou.', readTime: 5, path: '/verzekeringen', live: false, affiliate: true },
@@ -208,11 +208,11 @@ export function Tools() {
 const allArticles = [
   { tag: 'Beleggen', title: 'Beginnen met beleggen in 2026: de complete gids', summary: 'Alles wat je moet weten om veilig te starten met beleggen als beginner in Nederland.', readTime: 8, path: '/beleggen/beginnen-met-beleggen', live: true, affiliate: false },
   { tag: 'Schulden', title: 'Uit de schulden: het complete stappenplan', summary: 'Van schuldenoverzicht tot betalingsregelingen. Alles stap voor stap.', readTime: 10, path: '/schulden/uit-de-schulden', live: true, affiliate: false },
-  { tag: "ETF's", title: 'Wat is een ETF? Uitgelegd in gewone taal', summary: "IWDA, VWRL, VUSA, welke indexfondsen zijn het meest geschikt?", readTime: 9, path: '/beleggen', live: false, affiliate: true },
+  { tag: "ETF's", title: 'Wat is een ETF? Uitgelegd in gewone taal', summary: "IWDA, VWRL, VUSA, welke indexfondsen zijn het meest geschikt?", readTime: 9, path: '/beleggen/wat-is-een-etf', live: true, affiliate: true },
   { tag: 'Broker', title: 'DEGIRO review 2026: eerlijk en volledig', summary: 'Is DEGIRO de beste broker voor jou? Wij zetten alle voor- en nadelen op een rij.', readTime: 6, path: '/beleggen/degiro-review', live: true, affiliate: true, label: 'Broker review' },
   { tag: 'Sparen', title: 'Beste spaarrekening Nederland 2026', summary: 'Van Raisin tot Revolut en Bunq. Vergelijk de beste spaarrekeningen op rente en voorwaarden.', readTime: 7, path: '/sparen/beste-spaarrekening', live: true, affiliate: false },
   { tag: 'Vermogen', title: 'Wanneer ben je rijk in Nederland?', summary: 'Wat betekent rijk zijn eigenlijk? We kijken naar vermogen, inkomen en gevoel.', readTime: 5, path: '/extra-inkomen', live: false, affiliate: false },
-  { tag: 'Crypto', title: 'Bitcoin kopen in Nederland. Veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2026.', readTime: 5, path: '/beleggen', live: false, affiliate: true },
+  { tag: 'Crypto', title: 'Bitcoin kopen in Nederland. Veilig en goedkoop', summary: 'De beste manier om je eerste Bitcoin te kopen in 2026.', readTime: 6, path: '/beleggen/bitcoin-kopen-nederland', live: true, affiliate: true },
   { tag: 'Budget', title: 'Budget maken in 5 stappen', summary: 'Een budget hoeft niet ingewikkeld te zijn. Met dit stappenplan ben je in een uur klaar.', readTime: 5, path: '/sparen', live: false, affiliate: false },
 ]
 

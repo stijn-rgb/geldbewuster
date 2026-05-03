@@ -21,6 +21,10 @@ import ZorgstoeslagCalculator from './pages/tools/ZorgstoeslagCalculator'
 import UitDeSchulden from './pages/articles/UitDeSchulden'
 import BesteSpaarrekening from './pages/articles/BesteSpaarrekening'
 import WatIsEenETF from './pages/articles/WatIsEenETF'
+import ZorgverzekeringVergelijken from './pages/articles/ZorgverzekeringVergelijken'
+import Trading212Review from './pages/articles/Trading212Review'
+import DegiroVsTrading212 from './pages/articles/DegiroVsTrading212'
+import BitcoinKopenNederland from './pages/articles/BitcoinKopenNederland'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -60,6 +64,10 @@ export default function App() {
         <Route path="/schulden/uit-de-schulden" element={<UitDeSchulden />} />
         <Route path="/sparen/beste-spaarrekening" element={<BesteSpaarrekening />} />
         <Route path="/beleggen/wat-is-een-etf" element={<WatIsEenETF />} />
+        <Route path="/verzekeringen/zorgverzekering-vergelijken" element={<ZorgverzekeringVergelijken />} />
+        <Route path="/beleggen/trading-212-review" element={<Trading212Review />} />
+        <Route path="/beleggen/degiro-vs-trading-212" element={<DegiroVsTrading212 />} />
+        <Route path="/beleggen/bitcoin-kopen-nederland" element={<BitcoinKopenNederland />} />
         </Routes>
       </Layout>
     </>
