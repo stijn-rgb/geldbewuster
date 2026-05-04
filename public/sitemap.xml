@@ -153,6 +153,34 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://geldbewuster.nl/beleggen/iwda-etf</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://geldbewuster.nl/beleggen/beste-etfs-nederland</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://geldbewuster.nl/beleggen/dividend-beleggen</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://geldbewuster.nl/beleggen/aandelen-kopen-beginner</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Over ons -->
   <url>
     <loc>https://geldbewuster.nl/over-ons</loc>

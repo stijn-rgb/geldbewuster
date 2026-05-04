@@ -25,6 +25,10 @@ import ZorgverzekeringVergelijken from './pages/articles/ZorgverzekeringVergelij
 import Trading212Review from './pages/articles/Trading212Review'
 import DegiroVsTrading212 from './pages/articles/DegiroVsTrading212'
 import BitcoinKopenNederland from './pages/articles/BitcoinKopenNederland'
+import IwdaEtf from './pages/articles/IwdaEtf'
+import BesteEtfsNederland from './pages/articles/BesteEtfsNederland'
+import DividendBeleggen from './pages/articles/DividendBeleggen'
+import AandelenKopenBeginner from './pages/articles/AandelenKopenBeginner'
 import CompoundCalculator from './pages/tools/CompoundCalculator'
 import VrijheidCalculator from './pages/tools/VrijheidCalculator'
 import SchuldenCalculator from './pages/tools/SchuldenCalculator'
@@ -68,6 +72,10 @@ export default function App() {
         <Route path="/beleggen/trading-212-review" element={<Trading212Review />} />
         <Route path="/beleggen/degiro-vs-trading-212" element={<DegiroVsTrading212 />} />
         <Route path="/beleggen/bitcoin-kopen-nederland" element={<BitcoinKopenNederland />} />
+        <Route path="/beleggen/iwda-etf" element={<IwdaEtf />} />
+        <Route path="/beleggen/beste-etfs-nederland" element={<BesteEtfsNederland />} />
+        <Route path="/beleggen/dividend-beleggen" element={<DividendBeleggen />} />
+        <Route path="/beleggen/aandelen-kopen-beginner" element={<AandelenKopenBeginner />} />
         </Routes>
       </Layout>
     </>
